@@ -1,0 +1,11 @@
+Deliverable / activity,Project owner,Technical implementation,Quality assurance,Stakeholder / reviewer,Notes
+Project charter,A,R,C,C,Single individual may perform multiple roles in this portfolio case
+Scope baseline,A,R,C,C,Stakeholder approval is simulated / not obtained
+WBS and schedule,A,R,C,I,Relative estimates not historical actuals
+Data transformation,A,R,C,I,Technical role is performed by the project author
+SQL schema and loading,A,R,C,I,Technical role is performed by the project author
+Automated tests and CI,A,C,R,I,QA role is performed by the project author and CI automation
+Risk register,A,R,C,C,Reviewer role is an archetype not a named participant
+Status reporting,A,R,C,I,No real governance meeting is claimed
+Change assessment,A,R,C,C,Changes require documented impact review
+Acceptance and closure,A,R,C,C,No external customer sign-off exists
