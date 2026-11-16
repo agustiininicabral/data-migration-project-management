@@ -35,7 +35,7 @@ See the [delivery map](docs/17-delivery-map.md) for the workstream dependency di
 ## Live project workspace
 
 - Jira Software project [DMMP](https://agustinkbral2013.atlassian.net/jira/software/projects/DMMP/boards) is a company-managed Scrum project.
-- The live backlog contains **3 epics and 9 child tasks**, with hierarchy verified in Jira. Five tasks are complete with documented acceptance evidence; four remain open.
+- The live backlog contains **3 epics and 9 child tasks**, with hierarchy verified in Jira. Eight child tasks are complete with documented acceptance evidence; one remains open (DMMP-5, quick-filter configuration).
 - Confluence space [DMPC](https://agustinkbral2013.atlassian.net/wiki/spaces/DMPC) contains the project hub, eight governance pages and three technical evidence pages.
 - The current Jira board has three columns: **Por hacer**, **En curso** and **Listo**. The project currently exposes only those three statuses. Review/Blocked statuses and quick filters are desired controls, not configured functionality; the available integration does not expose supported write operations for those settings.
 - No sprint has been started. No issue has been marked complete merely to imply historical execution.
