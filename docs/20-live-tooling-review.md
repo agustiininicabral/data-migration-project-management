@@ -16,7 +16,7 @@
 | Estimation | Story Points field |
 | Ranking | Jira Rank field |
 | Backlog | 3 epics and 9 child tasks |
-| Task state | Initially all nine were Por hacer; current state is 5 Listo and 4 Por hacer |
+| Task state | Initially all nine were Por hacer; current state is 8 Listo and 1 Por hacer (DMMP-5) |
 | Confluence | Data Migration PM Case Study, key DMPC |
 | Confluence page tree | Project hub, eight governance pages and three technical child pages |
 
