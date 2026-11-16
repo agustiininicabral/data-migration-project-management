@@ -1,17 +1,17 @@
-Issue Type,Summary,Description,Priority,Labels,Epic Name,Epic Link
-Epic,Configure Jira project and Scrum board,"Create the Jira project, board, workflow, columns, and initial backlog. No historical sprint activity is claimed.",High,tooling,EPIC-JIRA,
-Epic,Create Confluence project knowledge base,"Create a private Confluence space and the project page tree; link it to Jira and the public evidence repositories.",High,tooling,EPIC-CONFLUENCE,
-Epic,Establish prospective project controls,"Begin recording real work sessions, decisions, blockers, risks, evidence, and review outcomes from this point forward.",High,governance,EPIC-CONTROLS,
-Task,Create Jira project and Scrum board,"Acceptance: project exists; key is recorded; Scrum board opens; project visibility is reviewed; board URL is documented.",High,tooling,,EPIC-JIRA
-Task,Configure Jira workflow and board columns,"Acceptance: To Do, In Progress, Review, and Done are mapped; Blocked handling is documented; workflow is tested with a sample issue.",High,tooling,,EPIC-JIRA
-Task,Import epics and initial backlog,"Acceptance: CSV preview is checked; epics and tasks are imported; each task is linked to the correct epic; no duplicate or fictitious completed items exist.",High,tooling,,EPIC-JIRA
-Task,Configure Jira labels and quick filters,"Acceptance: agreed labels are applied consistently; filters for blocked, tooling, evidence, and highest priority return expected items.",Medium,tooling,,EPIC-JIRA
-Task,Create Confluence space and home page,"Acceptance: private space exists; home page describes the case accurately; no invented Jira URL or stakeholder details are included.",High,tooling,,EPIC-CONFLUENCE
-Task,Create Confluence page tree,"Acceptance: all eight top-level pages and three technical workstream child pages exist and are navigable.",High,documentation,,EPIC-CONFLUENCE
-Task,Link Jira and Confluence,"Acceptance: Jira project link is available from the Confluence hub and the Confluence hub is linked from the Jira project description or relevant project area.",Medium,tooling,,EPIC-CONFLUENCE
-Task,Document technical evidence for users migration,"Acceptance: repository URL, sample quality counts, MySQL CI evidence, limitations, and evidence review date are recorded.",Medium,evidence,,EPIC-CONFLUENCE
-Task,Document technical evidence for roles and permissions migration,"Acceptance: repository URL, sample quality counts, MySQL CI and foreign-key evidence, limitations, and evidence review date are recorded.",Medium,evidence,,EPIC-CONFLUENCE
-Task,Document technical evidence for activity history migration,"Acceptance: repository URL, sample quality counts, MySQL CI and event validation evidence, limitations, and evidence review date are recorded.",Medium,evidence,,EPIC-CONFLUENCE
-Task,Run first prospective project status review,"Acceptance: a dated status note records actual work completed, current blockers, risks, decisions, next actions, and supporting links.",Medium,governance,,EPIC-CONTROLS
-Task,Record first decision and change log entries,"Acceptance: only decisions actually made after setup are recorded with date, context, options, rationale, and impact.",Medium,governance,,EPIC-CONTROLS
-Task,Run first retrospective and improvement action,"Acceptance: retrospective captures real observations from the first working cycle and assigns one measurable improvement action.",Medium,governance,,EPIC-CONTROLS
+Work type,Summary,Description,Priority,Labels,Work item ID,Parent
+Epic,Configure Jira project and Scrum board,"Create the Jira project, board, workflow, columns, and initial backlog. No historical sprint activity is claimed.",High,tooling,100,
+Epic,Create Confluence project knowledge base,"Create a private Confluence space and the project page tree; link it to Jira and the public evidence repositories.",High,tooling,200,
+Epic,Establish prospective project controls,"Begin recording real work sessions, decisions, blockers, risks, evidence, and review outcomes from this point forward.",High,governance,300,
+Task,Create Jira project and Scrum board,"Acceptance: project exists; key is recorded; Scrum board opens; project visibility is reviewed; board URL is documented.",High,tooling,101,100
+Task,Configure Jira workflow and board columns,"Acceptance: To Do, In Progress, Review, and Done are mapped; Blocked handling is documented; workflow is tested with a sample issue.",High,tooling,102,100
+Task,Import epics and initial backlog,"Acceptance: CSV preview is checked; epics and tasks are imported; each task is linked to the correct epic; no duplicate or fictitious completed items exist.",High,tooling,103,100
+Task,Configure Jira labels and quick filters,"Acceptance: agreed labels are applied consistently; filters for blocked, tooling, evidence, and highest priority return expected items.",Medium,tooling,104,100
+Task,Create Confluence space and home page,"Acceptance: private space exists; home page describes the case accurately; no invented Jira URL or stakeholder details are included.",High,tooling,201,200
+Task,Create Confluence page tree,"Acceptance: all eight top-level pages and three technical workstream child pages exist and are navigable.",High,documentation,202,200
+Task,Link Jira and Confluence,"Acceptance: Jira project link is available from the Confluence hub and the Confluence hub is linked from the Jira project description or relevant project area.",Medium,tooling,203,200
+Task,Document technical evidence for users migration,"Acceptance: repository URL, sample quality counts, MySQL CI evidence, limitations, and evidence review date are recorded.",Medium,evidence,204,200
+Task,Document technical evidence for roles and permissions migration,"Acceptance: repository URL, sample quality counts, MySQL CI and foreign-key evidence, limitations, and evidence review date are recorded.",Medium,evidence,205,200
+Task,Document technical evidence for activity history migration,"Acceptance: repository URL, sample quality counts, MySQL CI and event validation evidence, limitations, and evidence review date are recorded.",Medium,evidence,206,200
+Task,Run first prospective project status review,"Acceptance: a dated status note records actual work completed, current blockers, risks, decisions, next actions, and supporting links.",Medium,governance,301,300
+Task,Record first decision and change log entries,"Acceptance: only decisions actually made after setup are recorded with date, context, options, rationale, and impact.",Medium,governance,302,300
+Task,Run first retrospective and improvement action,"Acceptance: retrospective captures real observations from the first working cycle and assigns one measurable improvement action.",Medium,governance,303,300
