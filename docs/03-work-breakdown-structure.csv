@@ -1,0 +1,24 @@
+WBS ID,Work package,Activities,Deliverable,Acceptance evidence
+1.0,Project initiation,Define purpose objectives assumptions constraints and governance,Project charter,Charter and limitations documented
+1.1,Problem and objectives,Describe business need and measurable outcomes,Problem statement and objectives,Traceable objectives
+1.2,Stakeholder analysis,Identify stakeholder archetypes and influence,Stakeholder register,Roles and engagement needs recorded
+2.0,Project planning,Define scope schedule dependencies quality and risks,Planning baseline,Planning artifacts reviewed for consistency
+2.1,Scope definition,Define inclusions exclusions and acceptance criteria,Scope baseline,Scope plan published
+2.2,Work decomposition,Decompose deliverables into manageable work packages,WBS,Every deliverable mapped to a work package
+2.3,Schedule development,Estimate sequence and dependencies,Relative schedule,Milestones and critical dependencies documented
+2.4,Responsibility model,Map accountability and contribution,RACI matrix,Every key deliverable has one accountable role
+2.5,Risk planning,Identify assess and plan responses,Risk register,High-priority risks have response actions
+2.6,Communication planning,Define audience message cadence and channel,Communications plan,Communication needs documented
+3.0,Users migration,Build and verify user-data migration,Users migration repository,MySQL 8.0 CI and acceptance checks pass
+3.1,Users source and validation,Generate workbook and implement cleaning rules,Users ingestion and validation,Tests and dry-run pass
+3.2,Users database load,Apply schema load data and verify persistence,Users MySQL load,Integration workflow succeeds
+4.0,Roles and permissions migration,Build and verify normalized authorization migration,Roles and permissions repository,MySQL 8.0 CI and foreign-key checks pass
+4.1,Authorization model,Define entities relationships and validation,Relational schema and transforms,Integrity rules documented and tested
+4.2,Authorization database load,Load dependent entities and verify relationships,Authorization MySQL load,Integration workflow succeeds
+5.0,Activity history migration,Build and verify historical event migration,Activity history repository,MySQL 8.0 CI and audit checks pass
+5.1,Event normalization,Parse timestamps and validate events,Event transformation pipeline,Parsing and validation tests pass
+5.2,Activity database load,Load actors and events and verify history,Activity MySQL load,Integration workflow succeeds
+6.0,Monitoring and control,Review evidence risks changes and status,Status and performance reports,Claims distinguish measured facts from estimates
+6.1,Quality review,Compare acceptance criteria with evidence,Quality review record,All gaps recorded
+6.2,Change control,Assess and record scope changes,Change log,Decision and impact recorded
+7.0,Project closure,Consolidate outcomes limitations and lessons,Closure report,Open items and follow-up recommendations documented
