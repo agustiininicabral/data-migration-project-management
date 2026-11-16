@@ -76,6 +76,10 @@ docs/
   15-assumptions-and-limitations.md
   16-references.md
   17-delivery-map.md
+  18-jira-implementation-guide.md
+  19-confluence-space-blueprint.md
+jira/
+  jira-import-backlog.csv
 scripts/
   validate_project_docs.py
 .github/workflows/
