@@ -61,7 +61,7 @@ The schedule is expressed as estimated relative weeks, not fabricated calendar d
 
 ## Repository structure
 
-\`\`\`text
+```text
 docs/
   01-project-charter.md
   02-scope-management-plan.md
@@ -88,7 +88,7 @@ scripts/
   validate_project_docs.py
 .github/workflows/
   docs-validation.yml
-\`\`\`
+```
 
 ## Professional framing
 
