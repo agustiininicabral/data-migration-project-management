@@ -85,9 +85,16 @@ def read_csv(relative: str) -> tuple[list[str], list[dict[str, str]]]:
         if None in row or any(value is None for value in row.values()):
             fail(f"{relative}:{line_number}: inconsistent column count")
         optional_fields = {"Milestone"} if relative == "docs/04-schedule-and-milestones.csv" else set()
+        if relative == "jira/jira-import-backlog.csv":
+            optional_fields = {"Epic Link"} if row.get("Issue Type") == "Epic" else {"Epic Name"}
         for field, value in row.items():
             if field not in optional_fields and not value.strip():
                 fail(f"{relative}:{line_number}: blank required field '{field}'")
+        if relative == "jira/jira-import-backlog.csv":
+            if row.get("Issue Type") == "Epic" and not row.get("Epic Name", "").strip():
+                fail(f"{relative}:{line_number}: Epic row must define Epic Name")
+            if row.get("Issue Type") != "Epic" and not row.get("Epic Link", "").strip():
+                fail(f"{relative}:{line_number}: child issue must define Epic Link")
     return list(reader.fieldnames), rows
 
 def check_unique(rows: list[dict[str, str]], field: str, relative: str) -> set[str]:
