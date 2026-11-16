@@ -77,8 +77,10 @@ def read_csv(relative: str) -> tuple[list[str], list[dict[str, str]]]:
     for line_number, row in enumerate(rows, start=2):
         if None in row or any(value is None for value in row.values()):
             fail(f"{relative}:{line_number}: inconsistent column count")
-        if any(not value.strip() for value in row.values()):
-            fail(f"{relative}:{line_number}: blank field")
+        optional_fields = {"Milestone"} if relative == "docs/04-schedule-and-milestones.csv" else set()
+        for field, value in row.items():
+            if field not in optional_fields and not value.strip():
+                fail(f"{relative}:{line_number}: blank required field '{field}'")
     return list(reader.fieldnames), rows
 
 def check_unique(rows: list[dict[str, str]], field: str, relative: str) -> set[str]:
