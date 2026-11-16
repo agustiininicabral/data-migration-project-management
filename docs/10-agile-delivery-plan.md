@@ -12,7 +12,7 @@ The live Jira Software project is [DMMP — Data Migration Project Management](h
 | [DMMP-2](https://agustinkbral2013.atlassian.net/browse/DMMP-2) — Document technical workstream evidence | Link verified technical evidence | DMMP-7, DMMP-8, DMMP-9 |
 | [DMMP-3](https://agustinkbral2013.atlassian.net/browse/DMMP-3) — Establish prospective project controls | Record future project activity honestly | DMMP-10, DMMP-11, DMMP-12 |
 
-The current board contains nine child tasks, all initially created in **Por hacer**. Parent relationships were verified through Jira. The three epics above are the live operational backlog; the technical workstreams are evidence already implemented in separate repositories, not additional Jira epics.
+The board contains nine child tasks, initially created in **Por hacer**. After acceptance reviews on 2026-11-16, five tasks are in **Listo** (DMMP-4, DMMP-6, DMMP-7, DMMP-8 and DMMP-9) and four remain in **Por hacer** (DMMP-5, DMMP-10, DMMP-11 and DMMP-12). Parent relationships were verified through Jira. The three epics above are the live operational backlog; the technical workstreams are evidence already implemented in separate repositories, not additional Jira epics.
 
 ## Proposed delivery sequence
 
