@@ -29,7 +29,9 @@ The three README files document reproducible pipelines, synthetic source workboo
 | Monitoring & control | [Status report](docs/11-project-status-report.md), [KPI definitions](docs/12-performance-measures.md), [change control](docs/13-change-control.md) |
 | Closure | [Closure report](docs/14-project-closure-report.md), lessons learned and follow-up recommendations |
 
-See the [delivery map](docs/17-delivery-map.md) for the workstream dependency diagram, quality gates, and control loop.\n\nThe next operational phase is prepared in the [Jira implementation guide](docs/18-jira-implementation-guide.md), [Confluence workspace blueprint](docs/19-confluence-space-blueprint.md), and [Jira CSV import file](jira/jira-import-backlog.csv). These are setup assets, not evidence that an Atlassian workspace has already been created.
+See the [delivery map](docs/17-delivery-map.md) for the workstream dependency diagram, quality gates, and control loop.
+
+The operational workspace is now established: Jira Software project **DMMP** (Data Migration Project Management) is connected to the Confluence space **DMPC** (Data Migration PM Case Study). The live Jira backlog contains 3 epics and 9 open tasks. The [Jira implementation guide](docs/18-jira-implementation-guide.md), [Confluence workspace blueprint](docs/19-confluence-space-blueprint.md), and [Jira backlog CSV](jira/jira-import-backlog.csv) remain as setup documentation and a reproducible backlog export; the CSV is aligned with the live issue hierarchy.
 
 ## Delivery approach
 
@@ -45,6 +47,8 @@ The schedule is expressed as estimated relative weeks, not fabricated calendar d
 
 **Verified technical evidence:** the three repositories are public; each has a documented implementation and GitHub Actions validation workflow. The latest recorded runs at the time this case study was assembled completed successfully, including MySQL 8.0 integration checks. See each repository's Actions tab for current status.
 
+**Verified project tooling:** Jira project [DMMP](https://agustinkbral2013.atlassian.net/jira/software/projects/DMMP/boards) exists with three epics and nine open tasks. Confluence space [DMPC](https://agustinkbral2013.atlassian.net/wiki/spaces/DMPC) exists and was connected from the Jira setup flow. The current issue backlog is a live operational workspace, not proof of completed sprints or team delivery.
+
 **Not evidenced as historical project records:** approved business case, sponsor authorization, real end-user sign-off, actual expenditure, original estimates versus actuals, formal meeting minutes, or multi-person team performance. These remain assumptions, proposed controls, or simulation exercises in this case study.
 
 ## How to review this portfolio case
@@ -52,12 +56,12 @@ The schedule is expressed as estimated relative weeks, not fabricated calendar d
 1. Read the [charter](docs/01-project-charter.md) to understand the problem, objectives, scope, and constraints.
 2. Follow the [WBS](docs/03-work-breakdown-structure.csv) and [relative schedule](docs/04-schedule-and-milestones.csv) to see how deliverables are decomposed and sequenced.
 3. Review the [RACI](docs/05-raci-matrix.csv), [stakeholders](docs/06-stakeholder-register.csv), and [risk register](docs/07-risk-register.csv) for governance and control.
-4. Inspect the backlog and delivery plan, then compare the planned controls with the technical evidence in the three linked repositories.
+4. Inspect the [live Jira backlog](https://agustinkbral2013.atlassian.net/jira/software/projects/DMMP/boards) and compare planned controls with technical evidence in the three linked repositories.
 5. Finish with the status and closure reports to see what is proven, what is estimated, and what would be required before a real production rollout.
 
 ## Repository structure
 
-```text
+\`\`\`text
 docs/
   01-project-charter.md
   02-scope-management-plan.md
@@ -84,7 +88,7 @@ scripts/
   validate_project_docs.py
 .github/workflows/
   docs-validation.yml
-```
+\`\`\`
 
 ## Professional framing
 
