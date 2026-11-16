@@ -28,7 +28,9 @@ The three README files document reproducible pipelines, synthetic source workboo
 | Monitoring & control | [Status report](docs/11-project-status-report.md), [KPI definitions](docs/12-performance-measures.md), [change control](docs/13-change-control.md) |
 | Closure | [Closure report](docs/14-project-closure-report.md), lessons learned and follow-up recommendations |
 
-See the [delivery map](docs/17-delivery-map.md) for the workstream dependency diagram, quality gates, and control loop.\n\n## Delivery approach
+See the [delivery map](docs/17-delivery-map.md) for the workstream dependency diagram, quality gates, and control loop.
+
+## Delivery approach
 
 A **hybrid, lightweight approach** is modeled:
 
@@ -72,6 +74,11 @@ docs/
   14-project-closure-report.md
   15-assumptions-and-limitations.md
   16-references.md
+  17-delivery-map.md
+scripts/
+  validate_project_docs.py
+.github/workflows/
+  docs-validation.yml
 ```
 
 ## Professional framing
