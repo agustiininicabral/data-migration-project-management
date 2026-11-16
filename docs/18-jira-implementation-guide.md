@@ -1,109 +1,79 @@
-# Jira Implementation Guide
+# Jira Implementation and Operating Guide
 
-**Purpose:** Turn the portfolio backlog into an actively managed Jira project.  
-**State:** Configuration blueprint; no Jira project or board has been created yet.  
-**Tooling target:** Jira Cloud Free.
+**Live project:** [DMMP — Data Migration Project Management](https://agustinkbral2013.atlassian.net/jira/software/projects/DMMP/boards)  
+**Board:** DMMP board, Scrum, board ID 2  
+**State reviewed:** 2026-11-16
 
-## 1. Project setup
+## 1. Verified project setup
 
-Create a company-managed or team-managed **Scrum** project if Jira Free offers it in the current workspace. Prefer a Scrum template because the case study already contains epics, a product backlog, and an iterative delivery model.
+The company-managed Jira Software Scrum project exists with key **DMMP**. The project is intended for an individual educational portfolio case study coordinating three synthetic Excel-to-MySQL migration workstreams. It is not a client implementation or production migration.
 
-Suggested project name: **Data Migration Project Management**  
-Suggested project key: **DMMP** (use another available key if Jira reports a conflict).  
-Project description:
+## 2. Live issue hierarchy
 
-> Individual educational project-management case study coordinating three synthetic Excel-to-MySQL migration workstreams. Tracks planning, evidence review, quality gates, risks, documentation, and closure. Not a client implementation or production migration.
+| Parent epic | Child issues |
+|---|---|
+| DMMP-1 — Configure Jira project and Scrum board | DMMP-4, DMMP-5, DMMP-6 |
+| DMMP-2 — Document technical workstream evidence | DMMP-7, DMMP-8, DMMP-9 |
+| DMMP-3 — Establish prospective project controls | DMMP-10, DMMP-11, DMMP-12 |
 
-Do not add fictitious team members, stakeholders, approvals, or historical dates. Keep the project private to the account unless there is a deliberate reason to share it.
+The live hierarchy was checked in Jira. The CSV export at [jira-import-backlog.csv](../jira/jira-import-backlog.csv) preserves the three epics and nine child tasks using Jira's Work item ID and Parent mapping.
 
-## 2. Issue hierarchy and initial backlog
+## 3. Workflow and board
 
-Use:
-- **Epic:** a major delivery or governance outcome.
-- **Task:** a concrete piece of work with verifiable acceptance criteria.
-- **Bug:** a defect discovered during review or execution.
+The project currently exposes these three statuses for its work types:
 
-The import file at [jira-import-backlog.csv](../jira/jira-import-backlog.csv) contains three epics and their child tasks. It uses Jira Cloud's current `Work item ID` and `Parent` hierarchy mapping rather than the deprecated Epic Link / Epic Name fields. Use the CSV import flow that supports parent-child mapping, not the simplified bulk-create flow that does not preserve hierarchy. See [Atlassian's CSV preparation guide](https://support.atlassian.com/jira-software-cloud/docs/prepare-a-csv-file-for-import/) and [parent-child mapping instructions](https://support.atlassian.com/jira/kb/map-issueid-parentid-fields-jira-csv-import/). Map `Work type`, `Summary`, `Description`, `Priority`, `Labels`, `Work item ID`, and `Parent`; validate the preview and import log before accepting the result.
+- **Por hacer** — not started.
+- **En curso** — work in progress.
+- **Listo** — completed.
 
-The backlog is prospective. Existing technical work is recorded as completed evidence in the case study; new Jira tasks cover the current tooling and evidence-management phase. Do not backdate tasks or manufacture completed sprint work.
+The board maps each status to a matching column. The board uses the existing Story Points field for estimation and Jira's configured Rank field for ordering.
 
-## 3. Workflow
+The target workflow in the planning model includes Review and Blocked handling, but those are **not configured**. The available Atlassian connector provides read access to board configuration and issue transitions, but no supported write operation for board columns, workflow statuses or quick filters. Do not imply that Review or Blocked columns exist. If a blocker occurs, record its description, dependency, resolution role and next review trigger in the issue until native configuration is available.
 
-Recommended workflow:
+## 4. Labels and filters
 
-`To Do → In Progress → Review → Done`
+The nine tasks were created with labels aligned to tooling, evidence, governance, quality and workstream categories. Use labels consistently and avoid adding synonyms without a reason.
 
-Add **Blocked** as a status or flag if available. A blocked item must include:
-- What is blocked.
-- The dependency or decision required.
-- Who can resolve it (role, not an invented person).
-- The next review trigger.
+Useful quick filters to create through Jira's native board settings, if available:
+- Blocked work (once a reliable flag or label convention is in use).
+- `labels = tooling`
+- `labels = evidence`
+- `labels = governance`
 
-**Done** requires the acceptance criteria to be met and evidence linked in the issue. A code commit alone is not enough.
-
-## 4. Board configuration
-
-- Board type: Scrum.
-- Columns: To Do, In Progress, Review, Done.
-- Map Blocked to its own column if the template supports it; otherwise use a flag and a clear label.
-- Group backlog items by Epic.
-- Use labels consistently: `governance`, `tooling`, `documentation`, `quality`, `risk`, `evidence`.
-- Useful quick filters: `Blocked`, `label = tooling`, `label = evidence`, `priority = Highest`.
+Quick filters have not been configured or verified through the current integration.
 
 ## 5. Sprint operating rules
 
-Do not create artificial velocity or claim historical Scrum ceremonies. Start the first real sprint only after the project and board are configured.
+No sprint has been started. Start the first real sprint only when there is:
+1. One specific sprint goal.
+2. A realistic selection of open tasks.
+3. Confirmed acceptance criteria and dependencies.
+4. A real start and end period that can be reviewed.
+5. A plan to capture blockers and decisions as they happen.
 
-For each sprint:
-1. Set one sprint goal.
-2. Select only work that can realistically be completed by one contributor.
-3. Confirm dependencies and acceptance criteria before starting.
-4. Record blockers and scope changes as they happen.
-5. Review completed items against evidence.
-6. Write a short retrospective with one improvement action.
-
-For this individual portfolio exercise, estimate work in hours or small/medium/large effort bands. Story points and velocity are optional learning exercises, not performance metrics.
+Do not create artificial velocity or backdate ceremonies. For this individual portfolio exercise, estimate in hours or small/medium/large effort bands. Story points are optional and are not a performance metric without repeated real sprint data.
 
 ## 6. Definition of Ready
 
-An issue is ready when:
-- The outcome and reason are clear.
+- Outcome and reason are clear.
 - Acceptance criteria are testable.
-- Dependencies are identified.
-- The work is small enough to review.
-- Required source material or access is available.
+- Dependencies and assumptions are identified.
+- Work is small enough to review.
+- Required source material and access are available.
 
 ## 7. Definition of Done
 
-An issue is done when:
 - All acceptance criteria are satisfied.
-- Relevant repository or Confluence links are attached.
+- Repository, CI and Confluence evidence links are attached.
 - Evidence is reproducible or the limitation is disclosed.
 - Documentation is updated.
 - Remaining risks are recorded.
 - No unsupported historical or production claims are introduced.
 
-## 8. Reporting
+## 8. Reporting discipline
 
-At the end of each real work session, update:
-- Issue status and remaining work.
-- Blockers and decisions.
-- Risks changed or newly identified.
-- Evidence links.
-- Next action.
+At the end of each actual work session, update issue status, blockers, decisions, risks, evidence links and next actions. Do not report schedule variance, cost variance, CPI, SPI or velocity unless reliable baseline and actual data have been collected prospectively.
 
-Do not report schedule variance, cost variance, CPI, SPI, or velocity unless an approved baseline and actual data have been collected prospectively.
+## 9. Related workspace
 
-## 9. First working session
-
-The first session is complete only when:
-- Jira project and Scrum board exist.
-- Epics and initial tasks are imported.
-- Workflow and columns are checked.
-- The first sprint goal is selected.
-- The Confluence home page links to the Jira project.
-- A screenshot or URL evidence record is stored in the repository (do not commit credentials or private data).
-
-## 10. Reference
-
-See [Confluence workspace blueprint](19-confluence-space-blueprint.md) for the documentation structure and page templates.
+The [Confluence space DMPC](https://agustinkbral2013.atlassian.net/wiki/spaces/DMPC) contains the project hub, governance pages and technical evidence pages. The live project backlog is not evidence of completed sprints or multi-person delivery.
