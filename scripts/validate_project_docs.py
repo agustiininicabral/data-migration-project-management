@@ -30,6 +30,9 @@ REQUIRED_FILES = [
     "docs/15-assumptions-and-limitations.md",
     "docs/16-references.md",
     "docs/17-delivery-map.md",
+    "docs/18-jira-implementation-guide.md",
+    "docs/19-confluence-space-blueprint.md",
+    "jira/jira-import-backlog.csv",
 ]
 
 CSV_SCHEMAS = {
@@ -55,6 +58,9 @@ CSV_SCHEMAS = {
     "docs/09-product-backlog.csv": [
         "ID", "Epic", "User story / work item", "Priority", "Acceptance criteria",
         "Status / evidence"
+    ],
+    "jira/jira-import-backlog.csv": [
+        "Issue Type", "Summary", "Description", "Priority", "Labels", "Epic Name", "Epic Link"
     ],
 }
 
