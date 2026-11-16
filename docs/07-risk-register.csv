@@ -1,0 +1,10 @@
+Risk ID,Risk description,Category,Probability,Impact,Exposure,Response strategy,Mitigation / contingency,Owner role,Status
+R01,No real sponsor or data owner to validate requirements,Governance,High,High,High,Mitigate,Label assumptions; define validation questions; require sponsor sign-off before real deployment,Project owner,Open limitation
+R02,Synthetic datasets underrepresent production edge cases,Data quality,High,High,High,Mitigate,Document sample limits; add representative anonymized test cases only with authorization,Technical lead,Open limitation
+R03,CI success is misinterpreted as production readiness,Quality,Medium,High,High,Avoid,State CI scope and production exclusions in README and closure report,Quality lead,Controlled by disclosure
+R04,Timezone assumptions cause incorrect historical timestamps,Data integrity,Medium,High,High,Mitigate,Require source timezone contract; test offsets and daylight-saving transitions before real use,Technical lead,Open limitation
+R05,Duplicate handling may not match business survivorship rules,Data integrity,Medium,High,High,Mitigate,Require data-owner-approved survivorship rules and reconciliation report,Data owner,Open limitation
+R06,Foreign-key or load-order failures block authorization migration,Technical,Medium,Medium,Medium,Mitigate,Load in dependency order; verify FK constraints in MySQL integration CI,Technical lead,Mitigated by CI checks
+R07,Artifact retention or CI platform changes reduce evidence availability,Operational,Medium,Medium,Medium,Mitigate,Keep durable reports in repository; periodically verify workflow links,Project owner,Monitor
+R08,Unrecorded historical estimates or costs lead to false performance claims,Reporting,High,High,High,Avoid,Use relative planning estimates; do not calculate SPI CPI or velocity without baseline and actuals,Project owner,Controlled by disclosure
+R09,Scope expands into production security and operations without resources,Scope,Medium,High,High,Avoid,Use change control; defer production requirements to a separately authorized project,Project owner,Open limitation
