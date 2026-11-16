@@ -29,7 +29,7 @@ The three README files document reproducible pipelines, synthetic source workboo
 | Monitoring & control | [Status report](docs/11-project-status-report.md), [KPI definitions](docs/12-performance-measures.md), [change control](docs/13-change-control.md) |
 | Closure | [Closure report](docs/14-project-closure-report.md), lessons learned and follow-up recommendations |
 
-See the [delivery map](docs/17-delivery-map.md) for the workstream dependency diagram, quality gates, and control loop.
+See the [delivery map](docs/17-delivery-map.md) for the workstream dependency diagram, quality gates, and control loop.\n\nThe next operational phase is prepared in the [Jira implementation guide](docs/18-jira-implementation-guide.md), [Confluence workspace blueprint](docs/19-confluence-space-blueprint.md), and [Jira CSV import file](jira/jira-import-backlog.csv). These are setup assets, not evidence that an Atlassian workspace has already been created.
 
 ## Delivery approach
 
