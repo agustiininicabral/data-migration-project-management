@@ -29,6 +29,7 @@ REQUIRED_FILES = [
     "docs/14-project-closure-report.md",
     "docs/15-assumptions-and-limitations.md",
     "docs/16-references.md",
+    "docs/17-delivery-map.md",
 ]
 
 CSV_SCHEMAS = {
