@@ -1,5 +1,6 @@
 # Data Migration Project Management
 
+[![Docs validation](https://github.com/agustiininicabral/data-migration-project-management/actions/workflows/docs-validation.yml/badge.svg)](https://github.com/agustiininicabral/data-migration-project-management/actions/workflows/docs-validation.yml)
 [![Users migration CI](https://github.com/agustiininicabral/excel-to-sql-users-migration/actions/workflows/ci.yml/badge.svg)](https://github.com/agustiininicabral/excel-to-sql-users-migration/actions/workflows/ci.yml)
 [![Roles & permissions CI](https://github.com/agustiininicabral/excel-to-sql-roles-permissions/actions/workflows/ci.yml/badge.svg)](https://github.com/agustiininicabral/excel-to-sql-roles-permissions/actions/workflows/ci.yml)
 [![Activity history CI](https://github.com/agustiininicabral/excel-to-sql-activity-history/actions/workflows/ci.yml/badge.svg)](https://github.com/agustiininicabral/excel-to-sql-activity-history/actions/workflows/ci.yml)
