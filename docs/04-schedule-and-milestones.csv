@@ -1,0 +1,9 @@
+ID,Phase,Work package,Duration estimate,Predecessors,Planned relative window,Milestone,Notes
+S01,Initiation,Charter and objectives,2 days,None,Week 1,M1,Planning estimate not historical actual
+S02,Planning,Scope WBS stakeholders and RACI,3 days,S01,Week 1,M1,Can be refined after stakeholder review in a real project
+S03,Planning,Risks communications and acceptance criteria,2 days,S02,Week 2,,Planning estimate
+S04,Delivery,Users migration workstream,5 days,S03,Weeks 2-3,M2,Technical evidence exists in linked repository
+S05,Delivery,Roles and permissions workstream,7 days,S04,Weeks 4-5,M3,Includes relational integrity validation
+S06,Delivery,Activity history workstream,5 days,S05,Weeks 6-7,M4,Includes timestamp and audit validation
+S07,Control,Integrated evidence and quality review,2 days,S04;S05;S06,Week 8,,Cross-workstream review
+S08,Closure,Lessons learned and closure report,1 day,S07,Week 8,M5,Closure is a case-study synthesis
