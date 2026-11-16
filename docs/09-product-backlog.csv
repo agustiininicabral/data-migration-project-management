@@ -10,4 +10,4 @@ PB08,Roles & permissions,As database reviewer I need assignment relationships pr
 PB09,Activity history,As auditor I need timestamps normalized and events traceable,High,Timestamp parsing and actor/event constraints are tested,Implemented in linked repo
 PB10,Monitoring,As project owner I need a status report that separates evidence from assumptions,High,Technical evidence and PM metrics gaps are disclosed,Documented
 PB11,Closure,As reviewer I need outcomes and lessons learned consolidated,High,Closure report lists deliverables gaps and next steps,Documented
-PB12,Tooling extension,As a project coordinator I need a Jira board and Confluence space to operationalize tracking,Medium,Board and pages created with traceable issue links,Not implemented; future exercise
+PB12,Tooling extension,As a project coordinator I need a Jira board and Confluence space to operationalize tracking,Medium,Board and pages created with traceable issue links,Jira and Confluence setup assets prepared; live workspace pending
