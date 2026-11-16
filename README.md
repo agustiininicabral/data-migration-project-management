@@ -5,59 +5,67 @@
 [![Roles & permissions CI](https://github.com/agustiininicabral/excel-to-sql-roles-permissions/actions/workflows/ci.yml/badge.svg)](https://github.com/agustiininicabral/excel-to-sql-roles-permissions/actions/workflows/ci.yml)
 [![Activity history CI](https://github.com/agustiininicabral/excel-to-sql-activity-history/actions/workflows/ci.yml/badge.svg)](https://github.com/agustiininicabral/excel-to-sql-activity-history/actions/workflows/ci.yml)
 
-A portfolio case study showing how a small, self-directed technology initiative can be framed, planned, monitored, and closed using practical project-management artifacts. The case coordinates three related Excel-to-MySQL migration workstreams: user data, roles and permissions, and activity history.
+An individual project-management portfolio case study coordinating three related Excel-to-MySQL migration workstreams: user data, roles and permissions, and activity history. The case demonstrates planning, governance artifacts, evidence traceability, risk controls and a live Jira/Confluence workspace.
 
-> **Transparency:** This is an individual educational portfolio case study, not paid client work or evidence of employment as a Project Manager. The technical repositories and their automated integration checks are real. Planning artifacts that were not captured during implementation (for example, original meeting records, approved budgets, actual sprint velocity, or stakeholder sign-offs) are explicitly presented as reconstructed planning models or simulations—not historical facts.
+> **Transparency:** This is an individual educational portfolio case study, not paid client work or evidence of employment as a Project Manager. The technical repositories and their automated integration checks are real. Planning artifacts not captured during implementation are reconstructed planning models, not historical facts. No production deployment, client approval, real-data processing, actual budget or multi-person team is claimed.
 
 ## Executive summary
 
 | Workstream | Purpose | Technical evidence |
 |---|---|---|
-| [Users migration](https://github.com/agustiininicabral/excel-to-sql-users-migration) | Clean, validate, deduplicate and load synthetic user records | CI workflow with MySQL 8.0 integration; README reports 32 source records, 26 accepted and 6 rejected |
-| [Roles & permissions](https://github.com/agustiininicabral/excel-to-sql-roles-permissions) | Normalize a multi-sheet authorization workbook and enforce relational integrity | CI workflow with MySQL 8.0 integration and foreign-key checks; README reports 58 records, 52 accepted and 6 rejected |
-| [Activity history](https://github.com/agustiininicabral/excel-to-sql-activity-history) | Normalize historical events and load auditable activity records | CI workflow with MySQL 8.0 integration; README reports 33 records, 26 accepted and 7 rejected |
+| [Users migration](https://github.com/agustiininicabral/excel-to-sql-users-migration) | Clean, validate, deduplicate and load synthetic user records | MySQL 8.0 CI integration; 32 sample records, 26 accepted, 6 rejected |
+| [Roles & permissions](https://github.com/agustiininicabral/excel-to-sql-roles-permissions) | Normalize a multi-sheet authorization workbook and enforce relational integrity | MySQL 8.0 CI and FK checks; 58 sample records, 52 accepted, 6 rejected |
+| [Activity history](https://github.com/agustiininicabral/excel-to-sql-activity-history) | Normalize historical events and load auditable activity records | MySQL 8.0 CI integration; 33 sample records, 26 accepted, 7 rejected |
 
-The three README files document reproducible pipelines, synthetic source workbooks, SQL schemas and validation queries, automated tests, architecture diagrams, quality summaries, and CI workflows. The project-management case uses those repositories as delivery evidence; it does not imply that the three pipelines were deployed for a real organization.
+The technical repositories document reproducible pipelines, synthetic workbooks, SQL schemas and validation queries, automated tests, architecture diagrams, quality summaries and GitHub Actions workflows. The PM case uses these repositories as delivery evidence; it does not imply deployment for a real organization.
 
-## Project lifecycle and deliverables
+## Project lifecycle and artifacts
 
-| Phase | Key artifacts |
+| Phase | Artifacts |
 |---|---|
 | Initiation | [Project charter](docs/01-project-charter.md), [stakeholder register](docs/06-stakeholder-register.csv), assumptions and constraints |
 | Planning | [Scope baseline](docs/02-scope-management-plan.md), [WBS](docs/03-work-breakdown-structure.csv), [schedule](docs/04-schedule-and-milestones.csv), [RACI](docs/05-raci-matrix.csv), [risk register](docs/07-risk-register.csv), [communications plan](docs/08-communications-plan.md) |
-| Execution model | [Product backlog](docs/09-product-backlog.csv), [sprint plan](docs/10-agile-delivery-plan.md), technical workstream links |
+| Delivery model | [Product backlog](docs/09-product-backlog.csv), [Agile delivery plan](docs/10-agile-delivery-plan.md) |
 | Monitoring & control | [Status report](docs/11-project-status-report.md), [KPI definitions](docs/12-performance-measures.md), [change control](docs/13-change-control.md) |
 | Closure | [Closure report](docs/14-project-closure-report.md), lessons learned and follow-up recommendations |
+| Live operations | [Jira implementation guide](docs/18-jira-implementation-guide.md), [Confluence workspace guide](docs/19-confluence-space-blueprint.md), [live tooling review](docs/20-live-tooling-review.md) |
 
-See the [delivery map](docs/17-delivery-map.md) for the workstream dependency diagram, quality gates, and control loop.
+See the [delivery map](docs/17-delivery-map.md) for the workstream dependency diagram, quality gates and control loop.
 
-The operational workspace is now established: Jira Software project **DMMP** (Data Migration Project Management) is connected to the Confluence space **DMPC** (Data Migration PM Case Study). The live Jira backlog contains 3 epics and 9 open tasks. The [Jira implementation guide](docs/18-jira-implementation-guide.md), [Confluence workspace blueprint](docs/19-confluence-space-blueprint.md), and [Jira backlog CSV](jira/jira-import-backlog.csv) remain as setup documentation and a reproducible backlog export; the CSV is aligned with the live issue hierarchy.
+## Live project workspace
+
+- Jira Software project [DMMP](https://agustinkbral2013.atlassian.net/jira/software/projects/DMMP/boards) is a company-managed Scrum project.
+- The live backlog contains **3 epics and 9 child tasks**, with hierarchy verified in Jira. All nine tasks remain open until their acceptance criteria and evidence are satisfied.
+- Confluence space [DMPC](https://agustinkbral2013.atlassian.net/wiki/spaces/DMPC) contains the project hub, eight governance pages and three technical evidence pages.
+- The current Jira board has three columns: **Por hacer**, **En curso** and **Listo**. The project currently exposes only those three statuses. Review/Blocked statuses and quick filters are desired controls, not configured functionality; the available integration does not expose supported write operations for those settings.
+- No sprint has been started. No issue has been marked complete merely to imply historical execution.
+
+The [Jira backlog CSV](jira/jira-import-backlog.csv) is aligned with the live three-epic/nine-task hierarchy.
 
 ## Delivery approach
 
 A **hybrid, lightweight approach** is modeled:
+- Predictive controls for scope, deliverables, dependencies, milestones, risks, acceptance criteria and closure.
+- Iterative work packages for independent technical delivery and review.
+- Quality gates before a workstream is considered complete: automated tests, a real MySQL 8.0 integration run in CI, data-integrity checks, documentation and a reproducible execution path.
 
-- Predictive controls for scope, deliverables, dependencies, milestones, risks, acceptance criteria, and closure.
-- Iterative delivery for the three technical workstreams, with backlog-based prioritization and review points.
-- Quality gates before a workstream is considered complete: automated tests, a real MySQL 8.0 integration run in CI, data-integrity checks, documentation, and a reproducible execution path.
-
-The schedule is expressed as estimated relative weeks, not fabricated calendar dates. No historical sprint velocity, labor cost, budget, stakeholder approval, or meeting attendance is claimed.
+The schedule is expressed as estimated relative weeks, not fabricated calendar dates. No historical sprint velocity, labor cost, budget, stakeholder approval or meeting attendance is claimed.
 
 ## Current evidence and known gaps
 
-**Verified technical evidence:** the three repositories are public; each has a documented implementation and GitHub Actions validation workflow. The latest recorded runs at the time this case study was assembled completed successfully, including MySQL 8.0 integration checks. See each repository's Actions tab for current status.
+**Technical evidence:** all three repositories are public and document implementation plus GitHub Actions validation workflows configured with MySQL 8.0. Review the repository Actions tabs for the latest run and artifacts.
 
-**Verified project tooling:** Jira project [DMMP](https://agustinkbral2013.atlassian.net/jira/software/projects/DMMP/boards) exists with three epics and nine open tasks. Confluence space [DMPC](https://agustinkbral2013.atlassian.net/wiki/spaces/DMPC) exists and was connected from the Jira setup flow. The current issue backlog is a live operational workspace, not proof of completed sprints or team delivery.
+**Project tooling:** Jira DMMP and Confluence DMPC are live. The backlog hierarchy and board configuration were inspected directly. The current state and limitations are recorded in [the live tooling review](docs/20-live-tooling-review.md).
 
-**Not evidenced as historical project records:** approved business case, sponsor authorization, real end-user sign-off, actual expenditure, original estimates versus actuals, formal meeting minutes, or multi-person team performance. These remain assumptions, proposed controls, or simulation exercises in this case study.
+**Not evidenced as historical project records:** approved business case, sponsor authorization, real end-user sign-off, actual expenditure, original estimates versus actuals, formal meeting minutes or multi-person team performance. These remain assumptions, proposed controls or future prospective records.
 
 ## How to review this portfolio case
 
-1. Read the [charter](docs/01-project-charter.md) to understand the problem, objectives, scope, and constraints.
-2. Follow the [WBS](docs/03-work-breakdown-structure.csv) and [relative schedule](docs/04-schedule-and-milestones.csv) to see how deliverables are decomposed and sequenced.
-3. Review the [RACI](docs/05-raci-matrix.csv), [stakeholders](docs/06-stakeholder-register.csv), and [risk register](docs/07-risk-register.csv) for governance and control.
-4. Inspect the [live Jira backlog](https://agustinkbral2013.atlassian.net/jira/software/projects/DMMP/boards) and compare planned controls with technical evidence in the three linked repositories.
-5. Finish with the status and closure reports to see what is proven, what is estimated, and what would be required before a real production rollout.
+1. Read the [charter](docs/01-project-charter.md) for the problem, objectives, scope and constraints.
+2. Follow the [WBS](docs/03-work-breakdown-structure.csv) and [relative schedule](docs/04-schedule-and-milestones.csv) to see deliverable decomposition and sequencing.
+3. Review the [RACI](docs/05-raci-matrix.csv), [stakeholders](docs/06-stakeholder-register.csv) and [risk register](docs/07-risk-register.csv).
+4. Inspect the [live Jira backlog](https://agustinkbral2013.atlassian.net/jira/software/projects/DMMP/boards) and the [Confluence project hub](https://agustinkbral2013.atlassian.net/wiki/spaces/DMPC/pages/229377).
+5. Compare the status and closure reports with the technical repositories to distinguish proven evidence from estimates and limitations.
 
 ## Repository structure
 
@@ -82,6 +90,7 @@ docs/
   17-delivery-map.md
   18-jira-implementation-guide.md
   19-confluence-space-blueprint.md
+  20-live-tooling-review.md
 jira/
   jira-import-backlog.csv
 scripts/
@@ -94,6 +103,6 @@ scripts/
 
 Suggested CV/LinkedIn wording after you have reviewed and can explain the artifacts:
 
-> Developed an individual project-management case study coordinating three Excel-to-MySQL migration workstreams; produced scope, WBS, schedule, RACI, risk, stakeholder, backlog, quality, status, and closure artifacts, linking project controls to automated MySQL integration evidence.
+> Developed an individual project-management case study coordinating three Excel-to-MySQL migration workstreams; produced scope, WBS, schedule, RACI, risk, stakeholder, backlog, quality, status and closure artifacts, and linked project controls to automated MySQL integration evidence using Jira and Confluence.
 
-Do not describe this as professional Project Manager employment, a client implementation, a production deployment, or team leadership. The value is demonstrating structured project-management thinking supported by tangible technical deliverables.
+Do not describe this as professional Project Manager employment, a client implementation, a production deployment or team leadership. Its value is demonstrating structured project-management thinking supported by tangible technical deliverables and a live tracking workspace.
