@@ -1,0 +1,6 @@
+Stakeholder ID,Stakeholder archetype,Interest,Influence,Information needs,Engagement approach,Status / transparency
+ST01,Project author / owner,Successful completion and portfolio evidence,High,Scope decisions risks status and quality,Maintain artifacts and review evidence,Actual individual owner
+ST02,Data owner (hypothetical),Data meaning quality rules and reconciliation,High,Source definitions acceptance rules exceptions,Would validate mappings and survivorship rules,Archetype only; no real data owner
+ST03,Database / platform reviewer (hypothetical),Schema quality integrity and reproducibility,Medium,ERD SQL constraints integration evidence,Review technical design and CI reports,Archetype only; no real reviewer
+ST04,Security / privacy reviewer (hypothetical),Least privilege sensitive data retention and auditability,High,Data classification access and retention controls,Review before any real-data or production use,Archetype only; no review performed
+ST05,Recruiter / portfolio reviewer,Clarity credibility and demonstrable skills,Medium,Project summary artifacts evidence and limitations,Provide concise navigation and evidence links,Intended audience; no direct feedback collected
