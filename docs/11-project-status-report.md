@@ -21,7 +21,7 @@ Counts are synthetic sample outcomes documented by the technical repositories, n
 |---|---|---|
 | Charter, scope, WBS, schedule, RACI, stakeholder and risk artifacts | Documented | Reconstructed educational baseline; not client-approved |
 | Jira Software project | Created | Company-managed Scrum project DMMP |
-| Jira backlog | Created and hierarchy verified | 3 epics and 9 child tasks; 5 completed with evidence, 4 remain open |
+| Jira backlog | Created and hierarchy verified | 3 epics and 9 child tasks; 8 completed with evidence, 1 remains open |
 | Jira workflow | Partially configured by project template | Only Por hacer, En curso and Listo are available |
 | Board columns | Verified | Three columns mapped to the three existing statuses |
 | Quick filters | Not configured | Available connector exposes filter listing but no supported filter-create or board-filter write operation |
@@ -38,13 +38,13 @@ Counts are synthetic sample outcomes documented by the technical repositories, n
 - **DMMP-2 — Document technical workstream evidence:** DMMP-7, DMMP-8, DMMP-9.
 - **DMMP-3 — Establish prospective project controls:** DMMP-10, DMMP-11, DMMP-12.
 
-All nine child tasks were verified in Jira as **Por hacer** at the start of this review. After evidence-backed acceptance reviews, DMMP-4, DMMP-6, DMMP-7, DMMP-8 and DMMP-9 were moved to **Listo**. DMMP-5, DMMP-10, DMMP-11 and DMMP-12 remain open. No sprint was started and no issue was marked complete solely to improve the appearance of the board.
+All nine child tasks were verified in Jira as **Por hacer** at the start of this review. After evidence-backed acceptance reviews, DMMP-4 and DMMP-6 through DMMP-12 (except DMMP-5) were moved to **Listo**. Only DMMP-5 remains open for native quick-filter configuration. No sprint was started and no issue was marked complete solely to improve the appearance of the board.
 
 ## 4. Work completed in the current tooling phase
 
 1. Confirmed the DMMP Scrum board and its filter, status mapping and estimation configuration.
 2. Verified that the project currently defines only three statuses: Por hacer, En curso and Listo.
-3. Confirmed the nine-task backlog and its three parent epics; five child tasks were subsequently closed against documented acceptance evidence.
+3. Confirmed the nine-task backlog and its three parent epics; eight child tasks were closed against documented acceptance evidence.
 4. Reviewed the three Confluence technical workstream pages against their public repository descriptions and sample outcomes.
 5. Identified the integration limitation: board columns, workflow statuses and quick filters cannot be changed through the available supported connector operations.
 6. Updated the GitHub delivery documentation to match the live Jira structure and actual tool state.
