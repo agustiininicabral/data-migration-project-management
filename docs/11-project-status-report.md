@@ -1,61 +1,66 @@
 # Project Status Report
 
-**Reporting basis:** Repository evidence reviewed while assembling this portfolio case study, plus the live Jira and Confluence workspace setup completed on 2026-11-16.  
-**Status:** Technical workstreams implemented; project-management documentation and Atlassian workspaces established; operational backlog created.  
-**Important:** This is not a contemporaneous status report from the original development period. No original weekly status logs or approved baseline were available. Jira activity begins with the live workspace setup; earlier work is not backdated.
+**Reporting date:** 2026-11-16  
+**Reporting basis:** Repository evidence review and live Jira/Confluence reads performed on the reporting date.  
+**Status:** Technical workstreams implemented; PM documentation and Atlassian workspaces established; live backlog and evidence pages created.  
+**Integrity note:** This is a current portfolio status snapshot, not a reconstructed weekly log from the original technical implementation period. Jira tracking begins with the live workspace setup; no earlier work is backdated.
 
 ## 1. Workstream summary
 
-| Workstream | Technical status | Evidence reported in project README |
+| Workstream | Technical evidence | Sample outcome |
+|---|---|---:|
+| Users migration | Public repository, Python processing, SQL validation, automated tests and MySQL 8.0 CI | 32 input; 26 accepted; 6 rejected |
+| Roles & permissions | Public repository, relational model, Python processing, FK checks, tests and MySQL 8.0 CI | 58 input; 52 accepted; 6 rejected |
+| Activity history | Public repository, event/timestamp validation, tests and MySQL 8.0 CI | 33 input; 26 accepted; 7 rejected |
+
+Counts are synthetic sample outcomes documented by the technical repositories, not production volumes.
+
+## 2. Project-management controls
+
+| Control | Current state | Evidence / limitation |
 |---|---|---|
-| Users migration | Implemented; MySQL 8.0 CI validation documented | 32 input records; 26 accepted; 6 rejected |
-| Roles & permissions | Implemented; MySQL 8.0 CI and FK validation documented | 58 input records; 52 accepted; 6 rejected |
-| Activity history | Implemented; MySQL 8.0 CI validation documented | 33 input records; 26 accepted; 7 rejected |
-
-Counts above are sample dataset outcomes documented by the technical repositories. They are not production-volume metrics.
-
-## 2. Verification evidence
-
-At case-study assembly, the latest known GitHub Actions runs for all three repositories completed successfully and included MySQL 8.0 integration checks. The repositories include tests, SQL schema and validation/audit queries, documentation, and generated quality summaries.
-
-Because workflow artifacts can expire and repository contents can change, reviewers should open each repository's Actions tab to confirm the current run and artifact availability.
-
-## 3. Project-management status
-
-| Control area | Status | Comment |
-|---|---|---|
-| Charter and objectives | Documented | Self-directed portfolio charter; no sponsor authorization |
-| Scope and acceptance criteria | Documented | Educational scope only |
-| WBS and schedule | Documented | Relative estimates; no recovered actual dates |
-| Stakeholders and RACI | Documented | Archetypes and role hats; no multi-person team |
-| Risk management | Documented | Risks and mitigations recorded |
-| Agile delivery model | Proposed | Iteration model reconstructed for learning |
-| Jira Software project | Created | DMMP; company-managed Scrum project |
-| Confluence space | Created and connected | DMPC; connected from the Jira setup flow |
-| Jira backlog | Created | 3 epics and 9 open tasks; all currently in To Do |
+| Charter, scope, WBS, schedule, RACI, stakeholder and risk artifacts | Documented | Reconstructed educational baseline; not client-approved |
+| Jira Software project | Created | Company-managed Scrum project DMMP |
+| Jira backlog | Created and hierarchy verified | 3 epics and 9 child tasks; all nine tasks remain open |
+| Jira workflow | Partially configured by project template | Only Por hacer, En curso and Listo are available |
+| Board columns | Verified | Three columns mapped to the three existing statuses |
+| Quick filters | Not configured | Available connector exposes filter listing but no supported filter-create or board-filter write operation |
+| Confluence space | Created and connected | DMPC |
+| Confluence page tree | Created | Project hub, eight governance pages and three technical workstream pages |
+| Technical evidence pages | Content reviewed | Repository links, sample counts, validation scope and limitations recorded |
 | Actual budget / cost | Not measured | No expenditure or labor-time records |
-| Velocity / SPI / CPI | Not calculable | No reliable baseline and actuals |
+| Velocity / SPI / CPI | Not calculable | No real sprint or reliable baseline/actual data |
 | External acceptance | Not obtained | No real client or sponsor |
 
-## 4. Key issues and actions
-
-1. Complete Jira workflow and board-column configuration, then verify the board and backlog hierarchy.
-2. Add the three technical workstream evidence records to Confluence, linking the public repositories and CI evidence.
-3. Define source timezone policy before migrating real historical events.
-4. Add reconciliation and rollback procedures before production use.
-5. Perform security/privacy review and access-control design before processing personal data.
-6. Begin prospective status, decision, and retrospective records only after real work sessions occur.
-
-## 5. Operational tooling status
-
-The Jira Software project **Data Migration Project Management** (key **DMMP**) was created as a company-managed Scrum project. The Confluence space **Data Migration PM Case Study** (key **DMPC**) was selected in Jira's connect-work flow. The project backlog now contains three epics and nine open tasks, grouped under their intended parents:
+## 3. Live Jira hierarchy
 
 - **DMMP-1 — Configure Jira project and Scrum board:** DMMP-4, DMMP-5, DMMP-6.
 - **DMMP-2 — Document technical workstream evidence:** DMMP-7, DMMP-8, DMMP-9.
 - **DMMP-3 — Establish prospective project controls:** DMMP-10, DMMP-11, DMMP-12.
 
-The GitHub Jira CSV export has been updated to match this live backlog. No sprint has been started, no issue is marked complete, and no historical velocity or team activity is claimed. The remaining configuration and evidence tasks are intentionally left open.
+All nine child tasks were verified in Jira as **Por hacer** at the start of this review. No sprint was started and no issue was marked complete solely to improve the appearance of the board.
 
-## 6. Overall assessment
+## 4. Work completed in the current tooling phase
 
-The technical portfolio has concrete implementation and CI evidence. The project-management layer is a documented case-study model built after the technical work, not a historical record of formal project governance. Jira and Confluence now provide a real operational environment in which future activity can be recorded prospectively. This distinction is essential to an honest professional presentation.
+1. Confirmed the DMMP Scrum board and its filter, status mapping and estimation configuration.
+2. Verified that the project currently defines only three statuses: Por hacer, En curso and Listo.
+3. Confirmed the nine-task backlog and its three parent epics.
+4. Reviewed the three Confluence technical workstream pages against their public repository descriptions and sample outcomes.
+5. Identified the integration limitation: board columns, workflow statuses and quick filters cannot be changed through the available supported connector operations.
+6. Updated the GitHub delivery documentation to match the live Jira structure and actual tool state.
+
+## 5. Open work and constraints
+
+- Configure additional Review and Blocked workflow handling through Jira's native administration UI when supported; do not claim these states are active before verification.
+- Create quick filters through Jira's native board settings if the feature is available to the project.
+- Complete and verify the Confluence evidence links and corresponding Jira issue records.
+- Begin dated status, decision and retrospective records only after real work sessions occur.
+- Before production adaptation, define reconciliation, rollback, source timezone, security, privacy and access-control procedures with actual business owners.
+
+## 6. Metrics
+
+Technical sample acceptance/rejection counts are available. Project delivery metrics are not. Do not report schedule variance, cost variance, CPI, SPI, earned value or Scrum velocity without prospective baseline and actual data.
+
+## 7. Overall assessment
+
+The technical layer has tangible implementation and CI evidence. The PM layer now has a live Jira project, a verified backlog hierarchy and a Confluence knowledge base. This is a credible individual portfolio case study, but not evidence of client delivery, production deployment, multi-person team leadership or completed Scrum sprints. The remaining gap is operational use over time, not more speculative planning documents.
