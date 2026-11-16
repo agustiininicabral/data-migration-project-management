@@ -60,7 +60,7 @@ CSV_SCHEMAS = {
         "Status / evidence"
     ],
     "jira/jira-import-backlog.csv": [
-        "Issue Type", "Summary", "Description", "Priority", "Labels", "Epic Name", "Epic Link"
+        "Work type", "Summary", "Description", "Priority", "Labels", "Work item ID", "Parent"
     ],
 }
 
@@ -86,15 +86,10 @@ def read_csv(relative: str) -> tuple[list[str], list[dict[str, str]]]:
             fail(f"{relative}:{line_number}: inconsistent column count")
         optional_fields = {"Milestone"} if relative == "docs/04-schedule-and-milestones.csv" else set()
         if relative == "jira/jira-import-backlog.csv":
-            optional_fields = {"Epic Link"} if row.get("Issue Type") == "Epic" else {"Epic Name"}
+            optional_fields = {"Parent"} if row.get("Work type") == "Epic" else set()
         for field, value in row.items():
             if field not in optional_fields and not value.strip():
                 fail(f"{relative}:{line_number}: blank required field '{field}'")
-        if relative == "jira/jira-import-backlog.csv":
-            if row.get("Issue Type") == "Epic" and not row.get("Epic Name", "").strip():
-                fail(f"{relative}:{line_number}: Epic row must define Epic Name")
-            if row.get("Issue Type") != "Epic" and not row.get("Epic Link", "").strip():
-                fail(f"{relative}:{line_number}: child issue must define Epic Link")
     return list(reader.fieldnames), rows
 
 def check_unique(rows: list[dict[str, str]], field: str, relative: str) -> set[str]:
@@ -142,6 +137,21 @@ def main() -> None:
             dependency = dependency.strip()
             if dependency and dependency != "None" and dependency not in schedule_ids:
                 fail(f"schedule {row['ID']}: unknown predecessor {dependency}")
+
+    jira_rows = loaded["jira/jira-import-backlog.csv"]
+    jira_ids = [row["Work item ID"] for row in jira_rows]
+    if len(jira_ids) != len(set(jira_ids)):
+        fail("Jira import CSV: duplicate Work item ID")
+    jira_by_id = {row["Work item ID"]: row for row in jira_rows}
+    for row in jira_rows:
+        parent = row["Parent"].strip()
+        if row["Work type"] == "Epic" and parent:
+            fail("Jira import CSV: Epic rows cannot have a parent")
+        if row["Work type"] != "Epic":
+            if parent not in jira_by_id:
+                fail("Jira import CSV: unknown parent")
+            if jira_by_id[parent]["Work type"] != "Epic":
+                fail("Jira import CSV: parent must be an Epic")
 
     for row in loaded["docs/05-raci-matrix.csv"]:
         accountable = sum(value.strip() == "A" for key, value in row.items()
