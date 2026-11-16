@@ -23,7 +23,7 @@ Use:
 - **Task:** a concrete piece of work with verifiable acceptance criteria.
 - **Bug:** a defect discovered during review or execution.
 
-The import file at [jira-import-backlog.csv](../jira/jira-import-backlog.csv) contains three epics and their child tasks. It uses Jira Cloud's current `Work item ID` and `Parent` hierarchy mapping rather than the deprecated Epic Link / Epic Name fields. Use the CSV external-system import flow that supports parent-child mapping, not the simplified bulk-create flow that does not preserve hierarchy. Map `Work type`, `Summary`, `Description`, `Priority`, `Labels`, `Work item ID`, and `Parent`; validate the preview and import log before accepting the result.
+The import file at [jira-import-backlog.csv](../jira/jira-import-backlog.csv) contains three epics and their child tasks. It uses Jira Cloud's current `Work item ID` and `Parent` hierarchy mapping rather than the deprecated Epic Link / Epic Name fields. Use the CSV import flow that supports parent-child mapping, not the simplified bulk-create flow that does not preserve hierarchy. See [Atlassian's CSV preparation guide](https://support.atlassian.com/jira-software-cloud/docs/prepare-a-csv-file-for-import/) and [parent-child mapping instructions](https://support.atlassian.com/jira/kb/map-issueid-parentid-fields-jira-csv-import/). Map `Work type`, `Summary`, `Description`, `Priority`, `Labels`, `Work item ID`, and `Parent`; validate the preview and import log before accepting the result.
 
 The backlog is prospective. Existing technical work is recorded as completed evidence in the case study; new Jira tasks cover the current tooling and evidence-management phase. Do not backdate tasks or manufacture completed sprint work.
 
