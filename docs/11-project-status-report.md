@@ -42,6 +42,10 @@ Because workflow artifacts can expire and repository contents can change, review
 4. Perform security/privacy review and access-control design before processing personal data.
 5. If the project is continued as a learning exercise, create an actual Jira board and Confluence documentation space and record future work prospectively.
 
-## 5. Overall assessment
+## 5. Operational tooling preparation
+
+The repository now includes a Jira configuration guide, a Jira Cloud CSV backlog import file with parent-child hierarchy fields, and a Confluence space/page-tree blueprint. These are prepared implementation assets only. No Jira project, board, Confluence space, or live sprint has been created or claimed in this report. The next step requires connecting the Atlassian workspace and carrying out the setup prospectively.
+
+## 6. Overall assessment
 
 The technical portfolio has concrete implementation and CI evidence. The project-management layer is a documented case-study model built after the technical work, not a historical record of formal project governance. This distinction is essential to an honest professional presentation.
