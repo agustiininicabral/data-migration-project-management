@@ -1,0 +1,13 @@
+ID,Epic,User story / work item,Priority,Acceptance criteria,Status / evidence
+PB01,Initiation,As project owner I need a clear charter so the initiative has objectives and boundaries,Critical,Need objectives scope assumptions constraints and success criteria,Documented
+PB02,Planning,As reviewer I need a scope baseline so included and excluded work is explicit,Critical,Three workstreams and exclusions are defined,Documented
+PB03,Planning,As project owner I need a WBS and schedule to sequence delivery,Critical,Work packages dependencies milestones and estimates are traceable,Documented
+PB04,Governance,As reviewer I need stakeholder and RACI artifacts to understand accountability,High,Stakeholder archetypes and one accountable role per activity are documented,Documented
+PB05,Risk,As project owner I need risk responses to protect data integrity and credibility,Critical,High exposure risks have mitigation or avoidance responses,Documented
+PB06,Users migration,As data owner I need invalid user rows rejected consistently,High,Validation and rejection rules are tested and documented,Implemented in linked repo
+PB07,Users migration,As database reviewer I need persisted users verified,High,MySQL 8.0 CI validates stored row counts and constraints,CI evidence in linked repo
+PB08,Roles & permissions,As database reviewer I need assignment relationships protected,High,Foreign keys and duplicate pair checks are verified in MySQL CI,Implemented in linked repo
+PB09,Activity history,As auditor I need timestamps normalized and events traceable,High,Timestamp parsing and actor/event constraints are tested,Implemented in linked repo
+PB10,Monitoring,As project owner I need a status report that separates evidence from assumptions,High,Technical evidence and PM metrics gaps are disclosed,Documented
+PB11,Closure,As reviewer I need outcomes and lessons learned consolidated,High,Closure report lists deliverables gaps and next steps,Documented
+PB12,Tooling extension,As a project coordinator I need a Jira board and Confluence space to operationalize tracking,Medium,Board and pages created with traceable issue links,Not implemented; future exercise
