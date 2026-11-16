@@ -1,54 +1,67 @@
 # Agile Delivery Plan
 
-**Approach:** Hybrid. Predictive planning artifacts establish boundaries and quality gates; iterative work packages allow each migration to be built and verified independently.
+**Approach:** Hybrid. Predictive planning artifacts establish scope, dependencies and quality gates; iterative work packages support independent technical delivery and review.
 
-## Backlog structure
+## Live Jira backlog
 
-- **Epic 1 — Project governance:** charter, scope, WBS, schedule, stakeholder and risk controls.
-- **Epic 2 — Users migration:** ingest, clean, validate, load, verify, document.
-- **Epic 3 — Roles and permissions:** model entities, enforce relationships, load, verify, document.
-- **Epic 4 — Activity history:** parse events, normalize timestamps, load, verify, document.
-- **Epic 5 — Integrated closure:** consolidate evidence, limitations, lessons, and follow-up work.
+The live Jira Software project is [DMMP — Data Migration Project Management](https://agustinkbral2013.atlassian.net/jira/software/projects/DMMP/boards). Its current hierarchy is:
 
-## Proposed sprint model
+| Epic | Purpose | Child issues |
+|---|---|---|
+| [DMMP-1](https://agustinkbral2013.atlassian.net/browse/DMMP-1) — Configure Jira project and Scrum board | Operational Jira setup | DMMP-4, DMMP-5, DMMP-6 |
+| [DMMP-2](https://agustinkbral2013.atlassian.net/browse/DMMP-2) — Document technical workstream evidence | Link verified technical evidence | DMMP-7, DMMP-8, DMMP-9 |
+| [DMMP-3](https://agustinkbral2013.atlassian.net/browse/DMMP-3) — Establish prospective project controls | Record future project activity honestly | DMMP-10, DMMP-11, DMMP-12 |
 
-| Sprint | Goal | Planned output | Review gate |
-|---|---|---|---|
-| Sprint 0 (setup) | Establish project boundaries and delivery controls | Charter, scope, WBS, schedule, risks, stakeholder map | Planning baseline review |
-| Sprint 1 | Deliver the user migration | Reproducible user workbook, validation, MySQL load, CI evidence | User acceptance criteria |
-| Sprint 2 | Deliver the roles and permissions migration | Multi-sheet processing, normalized schema, FK checks, CI evidence | Referential-integrity review |
-| Sprint 3 | Deliver the activity history migration | Timestamp/event validation, MySQL load, audit checks, CI evidence | Audit-integrity review |
-| Sprint 4 (close) | Consolidate outcomes and close the case | Integrated status, lessons learned, closure report | Evidence and limitations review |
+The current board contains nine child tasks, all initially created in **Por hacer**. Parent relationships were verified through Jira. The three epics above are the live operational backlog; the technical workstreams are evidence already implemented in separate repositories, not additional Jira epics.
 
-This is a proposed iteration model for explaining the delivery approach. It is not a claim that formal Scrum ceremonies, sprint commitments, or historical sprint durations were recorded during the original technical work.
+## Proposed delivery sequence
+
+| Work package | Goal | Review gate |
+|---|---|---|
+| Tooling setup | Verify board, issue hierarchy, labels and available workflow | Board configuration and acceptance criteria checked |
+| Technical evidence | Link each repository, its CI workflow and sample quality outcome | Evidence is reproducible and limitations are explicit |
+| Prospective controls | Record dated status, decisions, blockers and retrospective outcomes as work occurs | Records are contemporaneous and supported |
+
+This is a proposed sequence, not evidence of historical Scrum ceremonies or sprint execution. No sprint has been started.
+
+## Workflow actually available
+
+The DMMP project currently exposes three global statuses for its work types:
+
+`Por hacer → En curso → Listo`
+
+The Scrum board maps these to three columns with the same names. The current Atlassian integration exposes board configuration as read-only; it does not expose a supported operation to add workflow statuses, remap columns or create board quick filters. Therefore **Review** and **Blocked** remain desired controls, not configured statuses. Do not represent them as live functionality.
+
+Until the board can be configured through Jira's native UI or a supported administrative operation:
+- Keep the three existing statuses.
+- Record blockers in the issue description or a comment, including dependency, resolution role and next review trigger.
+- Use the existing labels for workstream and control categorization.
+- Do not move an issue to **Listo** until its acceptance criteria and evidence are satisfied.
 
 ## Definition of Ready
 
 A work item is ready when:
-- The expected outcome is clear.
-- The affected workstream and dependencies are identified.
+- The expected outcome and affected workstream are clear.
+- Dependencies and data assumptions are identified.
 - Acceptance criteria are testable.
-- Data assumptions and edge cases are documented.
-- The work can be reviewed independently.
+- Edge cases are documented.
+- Required source material and access are available.
 
 ## Definition of Done
 
 A work item is done when:
-- Implementation and documentation are complete.
-- Automated tests pass.
-- Relevant MySQL 8.0 integration checks pass.
-- Validation output is reviewed.
-- Known limitations are documented.
-- Evidence is linked from the repository.
+- All acceptance criteria are satisfied.
+- Relevant repository, CI and Confluence links are attached.
+- Evidence is reproducible or the limitation is disclosed.
+- Documentation is updated.
+- Remaining risks are recorded.
+- No unsupported historical or production claims are introduced.
 
-## Suggested Jira workflow
+## Sprint and retrospective rules
 
-`Backlog → Ready → In Progress → Code Review → Validation → Done`
+Do not create artificial velocity or claim historical ceremonies. Start a real sprint only when there is a specific goal, a realistic set of tasks, and a genuine work period to track. For this individual case, use small effort bands or hours if useful; story points and velocity are optional learning exercises, not performance metrics.
 
-Use `Blocked` as an explicit state with a reason and owner. Avoid moving work to Done based only on code completion; the acceptance criteria and evidence must also be satisfied.
-
-## Retrospective prompts
-
+Retrospective prompts:
 1. Which validation rules prevented the most consequential data defects?
 2. Which source assumptions were weakest?
 3. Did workstream sequencing reduce rework?
