@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Migration evidence and control flow</title>
+<desc id="desc">A shared technical pipeline from synthetic Excel workbooks through Python transformation, MySQL 8.0 validation, automated CI, and project evidence, with three independent data domains.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1220"/><stop offset="1" stop-color="#1a2940"/></linearGradient>
+ <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4fd1c5"/><stop offset="1" stop-color="#91a6ff"/></linearGradient>
+ <style>
+ .h{font:700 38px Arial,sans-serif;fill:#f5f7fb}.s{font:400 20px Arial,sans-serif;fill:#b8c5d7}
+ .t{font:700 22px Arial,sans-serif;fill:#f5f7fb}.b{font:400 17px Arial,sans-serif;fill:#c4d0df}
+ .n{font:700 16px Arial,sans-serif;fill:#8fe1d8;letter-spacing:1px}.foot{font:400 15px Arial,sans-serif;fill:#9aabc0}
+ </style>
+</defs>
+<rect width="1600" height="900" rx="28" fill="url(#bg)"/>
+<text x="80" y="100" class="n">EVIDENCE CHAIN · TECHNICAL DELIVERY MODEL</text>
+<text x="80" y="160" class="h">From source workbook to verifiable evidence</text>
+<text x="80" y="205" class="s">Each workstream is independently executable; shared gates make results reviewable and repeatable.</text>
+
+<g transform="translate(80 285)">
+ <rect width="250" height="180" rx="18" fill="#1d2b42" stroke="#4fd1c5" stroke-width="2"/>
+ <text x="25" y="50" class="n">01 · INPUT</text><text x="25" y="94" class="t">Excel workbook</text><text x="25" y="130" class="b">Synthetic source data</text><text x="25" y="157" class="b">Defined field mappings</text>
+</g>
+<path d="M340 375 H390" stroke="url(#line)" stroke-width="5" stroke-linecap="round"/><path d="M380 365 L392 375 L380 385" fill="none" stroke="#91a6ff" stroke-width="4"/>
+<g transform="translate(400 285)">
+ <rect width="250" height="180" rx="18" fill="#1d2b42" stroke="#4fd1c5" stroke-width="2"/>
+ <text x="25" y="50" class="n">02 · TRANSFORM</text><text x="25" y="94" class="t">Python pipeline</text><text x="25" y="130" class="b">Normalize and validate</text><text x="25" y="157" class="b">Accept / reject records</text>
+</g>
+<path d="M660 375 H710" stroke="url(#line)" stroke-width="5" stroke-linecap="round"/><path d="M700 365 L712 375 L700 385" fill="none" stroke="#91a6ff" stroke-width="4"/>
+<g transform="translate(720 285)">
+ <rect width="250" height="180" rx="18" fill="#1d2b42" stroke="#8ca5ff" stroke-width="2"/>
+ <text x="25" y="50" class="n">03 · PERSIST</text><text x="25" y="94" class="t">MySQL 8.0</text><text x="25" y="130" class="b">Relational constraints</text><text x="25" y="157" class="b">Integrity validation</text>
+</g>
+<path d="M980 375 H1030" stroke="url(#line)" stroke-width="5" stroke-linecap="round"/><path d="M1020 365 L1032 375 L1020 385" fill="none" stroke="#91a6ff" stroke-width="4"/>
+<g transform="translate(1040 285)">
+ <rect width="250" height="180" rx="18" fill="#1d2b42" stroke="#8ca5ff" stroke-width="2"/>
+ <text x="25" y="50" class="n">04 · VERIFY</text><text x="25" y="94" class="t">Automated tests</text><text x="25" y="130" class="b">Unit and integration</text><text x="25" y="157" class="b">CI evidence</text>
+</g>
+<path d="M1300 375 H1350" stroke="url(#line)" stroke-width="5" stroke-linecap="round"/><path d="M1340 365 L1352 375 L1340 385" fill="none" stroke="#91a6ff" stroke-width="4"/>
+<g transform="translate(1360 285)">
+ <rect width="160" height="180" rx="18" fill="#1d2b42" stroke="#c29bff" stroke-width="2"/>
+ <text x="20" y="50" class="n">05 · RECORD</text><text x="20" y="94" class="t">Evidence</text><text x="20" y="130" class="b">Docs +</text><text x="20" y="157" class="b">reports</text>
+</g>
+
+<text x="80" y="555" class="n">THREE INDEPENDENT DATA DOMAINS</text>
+<g transform="translate(80 590)">
+ <rect width="440" height="145" rx="16" fill="#14243a" stroke="#38506d"/>
+ <text x="25" y="48" class="t">Users</text><text x="25" y="88" class="b">32 records · 26 accepted · 6 rejected</text>
+ <rect x="25" y="110" width="390" height="9" rx="4" fill="#30435c"/><rect x="25" y="110" width="316" height="9" rx="4" fill="#4fd1c5"/>
+</g>
+<g transform="translate(580 590)">
+ <rect width="440" height="145" rx="16" fill="#14243a" stroke="#38506d"/>
+ <text x="25" y="48" class="t">Roles &amp; permissions</text><text x="25" y="88" class="b">58 records · 52 accepted · 6 rejected</text>
+ <rect x="25" y="110" width="390" height="9" rx="4" fill="#30435c"/><rect x="25" y="110" width="350" height="9" rx="4" fill="#8ca5ff"/>
+</g>
+<g transform="translate(1080 590)">
+ <rect width="440" height="145" rx="16" fill="#14243a" stroke="#38506d"/>
+ <text x="25" y="48" class="t">Activity history</text><text x="25" y="88" class="b">33 records · 26 accepted · 7 rejected</text>
+ <rect x="25" y="110" width="390" height="9" rx="4" fill="#30435c"/><rect x="25" y="110" width="307" height="9" rx="4" fill="#c29bff"/>
+</g>
+<text x="80" y="800" class="foot">The diagram describes the implemented educational pipelines and their evidence chain. It does not represent a production cutover or a live customer system.</text>
+</svg>
