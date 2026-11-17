@@ -9,6 +9,8 @@ An individual project-management portfolio case study coordinating three related
 
 > **Transparency:** This is an individual educational portfolio case study, not paid client work or evidence of employment as a Project Manager. The technical repositories and their automated integration checks are real. Planning artifacts not captured during implementation are reconstructed planning models, not historical facts. No production deployment, client approval, real-data processing, actual budget or multi-person team is claimed.
 
+![Data Migration Program overview](docs/assets/project-overview.svg)
+
 ## Executive summary
 
 | Workstream | Purpose | Technical evidence |
@@ -18,6 +20,8 @@ An individual project-management portfolio case study coordinating three related
 | [Activity history](https://github.com/agustiininicabral/excel-to-sql-activity-history) | Normalize historical events and load auditable activity records | MySQL 8.0 CI integration; 33 sample records, 26 accepted, 7 rejected |
 
 The technical repositories document reproducible pipelines, synthetic workbooks, SQL schemas and validation queries, automated tests, architecture diagrams, quality summaries and GitHub Actions workflows. The PM case uses these repositories as delivery evidence; it does not imply deployment for a real organization.
+
+![Technical evidence chain](docs/assets/evidence-chain.svg)
 
 ## Project lifecycle and artifacts
 
@@ -29,16 +33,18 @@ The technical repositories document reproducible pipelines, synthetic workbooks,
 | Monitoring & control | [Status report](docs/11-project-status-report.md), [KPI definitions](docs/12-performance-measures.md), [change control](docs/13-change-control.md) |
 | Closure | [Closure report](docs/14-project-closure-report.md), lessons learned and follow-up recommendations |
 | Live operations | [Jira implementation guide](docs/18-jira-implementation-guide.md), [Confluence workspace guide](docs/19-confluence-space-blueprint.md), [live tooling review](docs/20-live-tooling-review.md) |
+| Presentation | [Portfolio walkthrough guide](docs/21-portfolio-presentation.md) |
 
 See the [delivery map](docs/17-delivery-map.md) for the workstream dependency diagram, quality gates and control loop.
 
 ## Live project workspace
 
 - Jira Software project [DMMP](https://agustinkbral2013.atlassian.net/jira/software/projects/DMMP/boards) is a company-managed Scrum project.
-- The live backlog contains **3 epics and 9 child tasks**, with hierarchy verified in Jira. Eight child tasks are complete with documented acceptance evidence; one remains open (DMMP-5, quick-filter configuration).
+- The live backlog contains **3 epics and 9 child tasks**. Eight child tasks are in **Listo** with evidence; **DMMP-5** remains open. Its parent epic **DMMP-1** is correctly in **En curso**; the other two epics are in **Listo**.
+- Jira labels distinguish tooling, evidence and governance work. DMMP-5 also carries the explicit `quick-filters-pending` label.
 - Confluence space [DMPC](https://agustinkbral2013.atlassian.net/wiki/spaces/DMPC) contains the project hub, eight governance pages and three technical evidence pages.
-- The current Jira board has three columns: **Por hacer**, **En curso** and **Listo**. The project currently exposes only those three statuses. Review/Blocked statuses and quick filters are desired controls, not configured functionality; the available integration does not expose supported write operations for those settings.
-- No sprint has been started. No issue has been marked complete merely to imply historical execution.
+- The current Jira board has three columns: **Por hacer**, **En curso** and **Listo**. Review/Blocked statuses and quick filters are not configured. The available integration supports board/filter reads but exposes no supported write operation for board quick filters or workflow/column configuration.
+- A future sprint named **DMMP Sprint 1** exists, but it has not been started or populated as a completed delivery cycle.
 
 The [Jira backlog CSV](jira/jira-import-backlog.csv) is aligned with the live three-epic/nine-task hierarchy.
 
@@ -53,9 +59,9 @@ The schedule is expressed as estimated relative weeks, not fabricated calendar d
 
 ## Current evidence and known gaps
 
-**Technical evidence:** all three repositories are public and document implementation plus GitHub Actions validation workflows configured with MySQL 8.0. Review the repository Actions tabs for the latest run and artifacts.
+**Technical evidence:** all three repositories are public and document implementation plus GitHub Actions validation workflows configured with MySQL 8.0. The [latest verified project-documentation run before this documentation refresh](https://github.com/agustiininicabral/data-migration-project-management/actions/runs/43978449663) completed successfully; the current documentation update triggers a fresh validation run.
 
-**Project tooling:** Jira DMMP and Confluence DMPC are live. The backlog hierarchy and board configuration were inspected directly. The current state and limitations are recorded in [the live tooling review](docs/20-live-tooling-review.md).
+**Project tooling:** Jira DMMP and Confluence DMPC are live. The backlog hierarchy, labels, sprint state and board configuration were inspected directly. The current state and limitations are recorded in [the live tooling review](docs/20-live-tooling-review.md).
 
 **Not evidenced as historical project records:** approved business case, sponsor authorization, real end-user sign-off, actual expenditure, original estimates versus actuals, formal meeting minutes or multi-person team performance. These remain assumptions, proposed controls or future prospective records.
 
@@ -91,6 +97,10 @@ docs/
   18-jira-implementation-guide.md
   19-confluence-space-blueprint.md
   20-live-tooling-review.md
+  21-portfolio-presentation.md
+  assets/
+    project-overview.svg
+    evidence-chain.svg
 jira/
   jira-import-backlog.csv
 scripts/
