@@ -6,6 +6,7 @@ from __future__ import annotations
 import csv
 import re
 import sys
+import xml.etree.ElementTree as ET
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -33,6 +34,14 @@ REQUIRED_FILES = [
     "docs/18-jira-implementation-guide.md",
     "docs/19-confluence-space-blueprint.md",
     "jira/jira-import-backlog.csv",
+    "docs/21-portfolio-presentation.md",
+    "docs/assets/project-overview.svg",
+    "docs/assets/evidence-chain.svg",
+]
+
+SVG_FILES = [
+    "docs/assets/project-overview.svg",
+    "docs/assets/evidence-chain.svg",
 ]
 
 CSV_SCHEMAS = {
@@ -117,6 +126,22 @@ def validate_markdown_links() -> int:
             checked += 1
     return checked
 
+def validate_svg_assets() -> int:
+    namespace = "{http://www.w3.org/2000/svg}"
+    for relative in SVG_FILES:
+        try:
+            root = ET.parse(ROOT / relative).getroot()
+        except (OSError, ET.ParseError) as exc:
+            fail(f"{relative}: invalid SVG/XML ({exc})")
+        if root.tag != f"{namespace}svg":
+            fail(f"{relative}: root element is not SVG")
+        if root.find(f"{namespace}title") is None:
+            fail(f"{relative}: missing accessible <title>")
+        if root.find(f"{namespace}desc") is None:
+            fail(f"{relative}: missing accessible <desc>")
+    return len(SVG_FILES)
+
+
 def main() -> None:
     for relative in REQUIRED_FILES:
         if not (ROOT / relative).is_file():
@@ -160,9 +185,11 @@ def main() -> None:
             fail(f"RACI row '{row['Deliverable / activity']}': expected exactly one A")
 
     link_count = validate_markdown_links()
+    svg_count = validate_svg_assets()
     print(f"Validated {len(REQUIRED_FILES)} required artifacts.")
     print(f"Validated {sum(len(rows) for rows in loaded.values())} CSV records.")
     print(f"Validated {link_count} local Markdown links.")
+    print(f"Validated {svg_count} accessible SVG assets.")
     print(f"Validated {len(wbs_ids)} WBS IDs and {len(schedule_ids)} schedule IDs.")
     print("Project documentation quality checks passed.")
 
