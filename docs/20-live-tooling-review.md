@@ -1,7 +1,7 @@
 # Live Tooling Review
 
-**Review date:** 2026-11-16  
-**Scope:** Jira Software project DMMP, Scrum board ID 2, Confluence space DMPC, and the portfolio repository.
+**Review date:** 2026-11-17  
+**Scope:** Jira Software project DMMP, Scrum board ID 2, Confluence space DMPC, GitHub repository and Actions validation.
 
 ## Verified configuration
 
@@ -10,45 +10,51 @@
 | Jira project | Data Migration Project Management, key DMMP |
 | Project type | Company-managed Jira Software Scrum |
 | Board | DMMP board, ID 2 |
-| Board filter | Filter ID 10001 |
+| Board filter | Filter ID 10001; JQL: `project = "DMMP" ORDER BY Rank ASC` |
 | Board columns | Por hacer, En curso, Listo |
 | Statuses | Por hacer (new), En curso (indeterminate), Listo (done) |
 | Estimation | Story Points field |
 | Ranking | Jira Rank field |
 | Backlog | 3 epics and 9 child tasks |
-| Task state | Initially all nine were Por hacer; current state is 8 Listo and 1 Por hacer (DMMP-5) |
+| Epic state | DMMP-1 En curso; DMMP-2 and DMMP-3 Listo |
+| Child-task state | 8 Listo; DMMP-5 remains Por hacer |
+| Labels | Tooling, evidence and governance labels are applied; DMMP-5 has quick-filters-pending |
+| Sprint | DMMP Sprint 1 exists in Future state; no active sprint |
 | Confluence | Data Migration PM Case Study, key DMPC |
 | Confluence page tree | Project hub, eight governance pages and three technical child pages |
 
 ## Jira issue hierarchy
 
-- DMMP-1: Configure Jira project and Scrum board
-  - DMMP-4: Configure Jira workflow and board columns
-  - DMMP-5: Configure Jira labels and quick filters
-  - DMMP-6: Review backlog hierarchy and acceptance criteria
-- DMMP-2: Document technical workstream evidence
-  - DMMP-7: Document users migration technical evidence
-  - DMMP-8: Document roles and permissions migration evidence
-  - DMMP-9: Document activity history migration evidence
-- DMMP-3: Establish prospective project controls
-  - DMMP-10: Run first prospective project status review
-  - DMMP-11: Record project decisions and change log entries
-  - DMMP-12: Run first retrospective and define improvement action
+- DMMP-1: Configure Jira project and Scrum board — **En curso**
+  - DMMP-4: Configure Jira workflow and board columns — Listo
+  - DMMP-5: Configure Jira labels and quick filters — Por hacer
+  - DMMP-6: Review backlog hierarchy and acceptance criteria — Listo
+- DMMP-2: Document technical workstream evidence — **Listo**
+  - DMMP-7: Document users migration technical evidence — Listo
+  - DMMP-8: Document roles and permissions migration evidence — Listo
+  - DMMP-9: Document activity history migration evidence — Listo
+- DMMP-3: Establish prospective project controls — **Listo**
+  - DMMP-10: Run first prospective project status review — Listo
+  - DMMP-11: Record project decisions and change log entries — Listo
+  - DMMP-12: Run first retrospective and define improvement action — Listo
 
 ## Capability boundary
 
-The available Jira integration supports reading board configuration, listing statuses, reading issue transitions, creating and editing issues, comments and sprint operations. It does not expose a supported write operation for editing the existing board's column mapping, creating workflow statuses/transitions or creating board quick filters.
+The current integration supports reading Jira board configuration, listing saved filters, editing issue fields and labels, comments, transitions and sprint operations. It does not expose a supported write operation for creating board quick filters, changing the existing board's column mapping, or creating workflow statuses/transitions.
 
-The project therefore remains on its verified three-status workflow. Review and Blocked must not be described as active statuses. Quick filters remain unconfigured. This is a tooling limitation, not a reason to fabricate a configuration result or to create a duplicate board.
+The only saved filter returned for DMMP is the board's existing filter ID 10001. This saved filter controls which issues appear on the board; it is not a board quick filter and must not be represented as one.
+
+The project therefore remains on its verified three-status workflow. Review and Blocked are not active statuses. Quick filters remain unconfigured. The remaining native UI action is recorded in Jira issue [DMMP-5](https://agustinkbral2013.atlassian.net/browse/DMMP-5); its parent epic DMMP-1 remains En curso. Do not close either item until the quick-filter configuration is completed and verified or its unavailability is confirmed in the current Jira plan.
 
 ## Evidence and operating controls
 
 - The three technical repositories use synthetic data and document MySQL 8.0 CI integration.
 - Sample outcomes: users 26/32 accepted; roles and permissions 52/58 accepted; activity history 26/33 accepted.
 - The technical evidence pages in Confluence link to the corresponding public repositories.
+- GitHub Actions documentation validation run [#41](https://github.com/agustiininicabral/data-migration-project-management/actions/runs/43978449663) completed successfully on commit `3b9ebb756d7061a204ab9f2886819a442b8a55f7` on 2026-11-16. This run predates the 2026-11-17 documentation refresh; the refresh triggers a new run.
 - No sprint has been started; no historical velocity, actual cost, SPI or CPI is available.
 - The original technical implementation and the later PM tooling setup are distinct phases. Do not backdate Jira activity.
 
 ## Readiness assessment
 
-The project is ready to proceed with prospective work tracking and evidence review. It is not yet ready to claim a completed Scrum delivery cycle. Before starting a sprint, select a real goal and task scope. Before presenting the board as a mature workflow, configure and verify Review/Blocked handling and quick filters in Jira's native UI or through a supported administrative integration.
+The technical educational workstreams and their documentation are complete for portfolio presentation. The live PM workspace is usable for prospective tracking but not yet a fully configured Scrum operating environment. Before starting DMMP Sprint 1, select a real goal and scope. Before claiming a mature workflow, configure and verify native quick filters and decide whether Review/Blocked handling is needed and supported.
