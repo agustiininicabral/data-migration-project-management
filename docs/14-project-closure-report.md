@@ -1,6 +1,7 @@
 # Project Closure Report
 
-**Closure type:** Educational portfolio case-study closure  
+**Closure type:** Educational portfolio case-study closure for the technical migration scope and documented planning baseline  
+**Live PM tooling status:** Partially open; Jira task DMMP-5 remains pending native quick-filter configuration  
 **External customer acceptance:** Not applicable / not obtained  
 **Production deployment:** Not performed
 
@@ -56,4 +57,4 @@ Sample row counts are documented in the [performance measures](12-performance-me
 
 ## 7. Closure statement
 
-The educational scope is complete as a documented portfolio case study once the repository contents and linked technical evidence have been reviewed. This closure does not certify the pipelines for production use and does not imply client delivery, sponsor approval, or professional employment as a Project Manager.
+The three technical workstreams and their educational evidence are complete for portfolio presentation. The planning baseline and governance documentation are also available. The live Jira configuration phase is not fully closed: DMMP-5 remains open and its parent epic DMMP-1 remains En curso. This closure therefore applies to the educational technical scope, not to all future PM-tooling work. It does not certify the pipelines for production use and does not imply client delivery, sponsor approval, or professional employment as a Project Manager.
