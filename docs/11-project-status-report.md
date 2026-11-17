@@ -59,7 +59,7 @@ DMMP-5 remains open because saved board filter ID 10001 is not a quick filter. T
 4. Standardized the parent epic and remaining task labels and recorded the open quick-filter dependency.
 5. Confirmed the board contains one future sprint, **DMMP Sprint 1**; it is not active and has not been started.
 6. Reviewed the three Confluence technical workstream pages against their public repositories and sample outcomes.
-7. Verified GitHub Actions run [#50](https://github.com/agustiininicabral/data-migration-project-management/actions/runs/44023755533) completed successfully for commit `e0e89fe3a6ae29a3c898048f2e9ac18cc9ca0f79` on 2026-11-17. It validates required files, local Markdown links, CSV structures, governance rules and accessible SVG assets.
+7. Verified GitHub Actions documentation validation run [#53](https://github.com/agustiininicabral/data-migration-project-management/actions/runs/44023914992) completed successfully for commit `cd5b5c02e9fd30afcc544809ad723a735ac34760`. The latest technical integration runs also passed: [users #18](https://github.com/agustiininicabral/excel-to-sql-users-migration/actions/runs/43831526689), [roles and permissions #16](https://github.com/agustiininicabral/excel-to-sql-roles-permissions/actions/runs/43831537318), and [activity history #14](https://github.com/agustiininicabral/excel-to-sql-activity-history/actions/runs/43831547394). Each run executed automated tests, applied a MySQL 8.0 schema, performed the migration against a real MySQL service, verified persisted records/integrity, and uploaded a validation artifact. on 2026-11-17. It validates required files, local Markdown links, CSV structures, governance rules and accessible SVG assets.
 
 ## 5. Open work and constraints
 
