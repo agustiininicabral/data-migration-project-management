@@ -10,7 +10,7 @@
 | Objective | Result | Evidence / qualification |
 |---|---|---|
 | Deliver three independent migration workstreams | Achieved for educational scope | Three public repositories with setup instructions, code, SQL, tests, and documentation |
-| Validate database behavior | Achieved for documented CI scope | Latest known MySQL 8.0 integration workflows succeeded at case-study assembly |
+| Validate database behavior | Achieved for documented CI scope | Latest verified MySQL 8.0 integration runs passed: users #18, roles and permissions #16, and activity history #14 (2026-11-16); each executed the migration and verified persisted records and integrity in CI. The PM documentation validator also passed run #53 (2026-11-17). |
 | Make data-quality decisions explicit | Achieved | Validation rules, quality summaries, and limitations documented |
 | Establish PM traceability | Achieved as portfolio documentation | Charter, scope, WBS, schedule, RACI, stakeholder and risk registers, backlog, status, change control, closure |
 | Demonstrate real-world governance | Not achieved | No sponsor, client, formal approvals, or multi-person team |
