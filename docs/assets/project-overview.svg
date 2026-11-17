@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+<title id="title">Data Migration Project Management case study overview</title>
+<desc id="desc">Three synthetic Excel to MySQL migration workstreams with sample quality outcomes, shared technical quality gates, and live project controls in Jira and Confluence.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1220"/><stop offset="1" stop-color="#17243a"/></linearGradient>
+  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4fd1c5"/><stop offset="1" stop-color="#7c9cff"/></linearGradient>
+  <style>
+    .eyebrow{font:700 18px Arial,sans-serif;letter-spacing:3px;fill:#80d8d0}
+    .heading{font:700 42px Arial,sans-serif;fill:#f4f7fb}
+    .sub{font:400 21px Arial,sans-serif;fill:#b9c6d8}
+    .cardtitle{font:700 25px Arial,sans-serif;fill:#f4f7fb}
+    .body{font:400 18px Arial,sans-serif;fill:#c4d0df}
+    .metric{font:700 34px Arial,sans-serif;fill:#ffffff}
+    .small{font:400 15px Arial,sans-serif;fill:#9fb0c5}
+    .tag{font:700 15px Arial,sans-serif;letter-spacing:1px;fill:#9ce7df}
+  </style>
+</defs>
+<rect width="1600" height="1000" rx="28" fill="url(#bg)"/>
+<rect x="72" y="68" width="1456" height="5" rx="3" fill="url(#accent)"/>
+<text x="82" y="125" class="eyebrow">PORTFOLIO CASE STUDY · PROJECT MANAGEMENT + DATA ENGINEERING</text>
+<text x="82" y="190" class="heading">Data Migration Program</text>
+<text x="82" y="230" class="sub">A traceable, evidence-led case study across three Excel-to-MySQL workstreams.</text>
+
+<g transform="translate(82 285)">
+  <rect width="450" height="270" rx="18" fill="#1d2b42" stroke="#38506d"/>
+  <rect x="0" y="0" width="450" height="8" rx="4" fill="#4fd1c5"/>
+  <text x="28" y="54" class="tag">WORKSTREAM 01</text>
+  <text x="28" y="96" class="cardtitle">Users migration</text>
+  <text x="28" y="150" class="metric">32 <tspan font-size="18" fill="#b9c6d8">sample records</tspan></text>
+  <text x="28" y="196" class="body">26 accepted  ·  6 rejected</text>
+  <rect x="28" y="220" width="394" height="12" rx="6" fill="#33455f"/>
+  <rect x="28" y="220" width="320" height="12" rx="6" fill="#4fd1c5"/>
+</g>
+<g transform="translate(575 285)">
+  <rect width="450" height="270" rx="18" fill="#1d2b42" stroke="#38506d"/>
+  <rect x="0" y="0" width="450" height="8" rx="4" fill="#8ca5ff"/>
+  <text x="28" y="54" class="tag">WORKSTREAM 02</text>
+  <text x="28" y="96" class="cardtitle">Roles &amp; permissions</text>
+  <text x="28" y="150" class="metric">58 <tspan font-size="18" fill="#b9c6d8">sample records</tspan></text>
+  <text x="28" y="196" class="body">52 accepted  ·  6 rejected</text>
+  <rect x="28" y="220" width="394" height="12" rx="6" fill="#33455f"/>
+  <rect x="28" y="220" width="353" height="12" rx="6" fill="#8ca5ff"/>
+</g>
+<g transform="translate(1068 285)">
+  <rect width="450" height="270" rx="18" fill="#1d2b42" stroke="#38506d"/>
+  <rect x="0" y="0" width="450" height="8" rx="4" fill="#c29bff"/>
+  <text x="28" y="54" class="tag">WORKSTREAM 03</text>
+  <text x="28" y="96" class="cardtitle">Activity history</text>
+  <text x="28" y="150" class="metric">33 <tspan font-size="18" fill="#b9c6d8">sample records</tspan></text>
+  <text x="28" y="196" class="body">26 accepted  ·  7 rejected</text>
+  <rect x="28" y="220" width="394" height="12" rx="6" fill="#33455f"/>
+  <rect x="28" y="220" width="310" height="12" rx="6" fill="#c29bff"/>
+</g>
+
+<g transform="translate(82 595)">
+  <rect width="690" height="255" rx="18" fill="#132238" stroke="#38506d"/>
+  <text x="28" y="48" class="tag">SHARED TECHNICAL QUALITY GATES</text>
+  <g class="body">
+    <circle cx="43" cy="92" r="7" fill="#4fd1c5"/><text x="64" y="99">Python processing and validation</text>
+    <circle cx="43" cy="137" r="7" fill="#4fd1c5"/><text x="64" y="144">SQL schema and data-integrity checks</text>
+    <circle cx="43" cy="182" r="7" fill="#4fd1c5"/><text x="64" y="189">MySQL 8.0 integration tests in GitHub Actions</text>
+    <circle cx="43" cy="227" r="7" fill="#4fd1c5"/><text x="64" y="234">Reproducible documentation and evidence</text>
+  </g>
+</g>
+<g transform="translate(810 595)">
+  <rect width="708" height="255" rx="18" fill="#132238" stroke="#38506d"/>
+  <text x="28" y="48" class="tag">LIVE PROJECT CONTROLS · JIRA + CONFLUENCE</text>
+  <text x="28" y="104" class="metric">3 <tspan font-size="19" fill="#b9c6d8">epics</tspan><tspan dx="26">9</tspan><tspan font-size="19" fill="#b9c6d8">tasks</tspan></text>
+  <text x="28" y="145" class="body">8 child tasks completed with evidence · 1 open</text>
+  <text x="28" y="184" class="body">3 verified board columns · Sprint 1 not started</text>
+  <text x="28" y="221" class="body">Quick-filter setup remains a native Jira follow-up</text>
+</g>
+<text x="82" y="915" class="small">All records are synthetic test data. Individual educational portfolio work; no client delivery or production deployment is claimed.</text>
+<text x="82" y="947" class="small">Latest project documentation CI: GitHub Actions run #41 — success (2026-11-16).</text>
+</svg>
