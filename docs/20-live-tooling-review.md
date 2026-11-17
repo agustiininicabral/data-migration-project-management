@@ -51,7 +51,7 @@ The project therefore remains on its verified three-status workflow. Review and 
 - The three technical repositories use synthetic data and document MySQL 8.0 CI integration.
 - Sample outcomes: users 26/32 accepted; roles and permissions 52/58 accepted; activity history 26/33 accepted.
 - The technical evidence pages in Confluence link to the corresponding public repositories.
-- GitHub Actions documentation validation run [#41](https://github.com/agustiininicabral/data-migration-project-management/actions/runs/43978449663) completed successfully on commit `3b9ebb756d7061a204ab9f2886819a442b8a55f7` on 2026-11-16. This run predates the 2026-11-17 documentation refresh; the refresh triggers a new run.
+- GitHub Actions documentation validation run [#50](https://github.com/agustiininicabral/data-migration-project-management/actions/runs/44023755533) completed successfully on commit `e0e89fe3a6ae29a3c898048f2e9ac18cc9ca0f79` on 2026-11-17. It validates required files, local Markdown links, CSV structures, governance rules and accessible SVG assets.
 - No sprint has been started; no historical velocity, actual cost, SPI or CPI is available.
 - The original technical implementation and the later PM tooling setup are distinct phases. Do not backdate Jira activity.
 
